@@ -6,7 +6,8 @@ do
 	sum=$((sub1+sub2+sub3+sub4+sub5+sub6+sub7))
 	arr+=($sum)
 	n=$((n+1))
-done<doc.txt
+#done<doc.txt
+done<mark
 #Finding the mean
 echo "Total mark of each student : ${arr[@]}"
 sum=0
