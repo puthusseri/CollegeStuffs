@@ -1,15 +1,12 @@
 sum=0
-n=15
+n=0
 arr=()
 while IFS=, read -r rn admno name sub1 sub2 sub3 sub4 sub5 sub6 sub7
 do
-
 	sum=$((sub1+sub2+sub3+sub4+sub5+sub6+sub7))
-	mean=$((sum))
-	arr+=($mean)
+	arr+=($sum)
+	n=$((n+1))
 done<doc.txt
-
-
 #Finding the mean
 echo "Total mark of each student : ${arr[@]}"
 sum=0
@@ -20,8 +17,6 @@ do
 done
 mean=$((sum/15))
 echo "Mean="$mean
-
-
 #Finding the SD
 sum_sd=0
 for i in ${arr[*]}
@@ -33,21 +28,12 @@ done
 sd=$((sum_sd/n))
 sd=$(echo "sqrt($sd)" | bc)
 echo "Standard Deviation : $sd"
-
-
-a=9
-b=7
-c=5
-d=3
-e=1
 #echo ${arr[3]}
-
 a=$((mean+2*sd))
 b=$((mean+sd))
 c=$((mean))
 d=$((mean-sd))
 e=$((mean-2*sd))
-
 a_count=0
 b_count=0
 c_count=0
@@ -85,9 +71,7 @@ rn=$((rn+1))
 		fail_count=$((fail_count+1))
 	fi
 done
-
-draw_Hista() {
-	
+draw_Hist() {
 	#echo $1
 	for i in `seq 1 $1`
 	do
@@ -95,23 +79,6 @@ draw_Hista() {
 		
 	done
 }
-draw_Hist() {
-
-		for i in 1 2 3 4 5 6:
-		do
-		
-			for j in `seq 1 $1`
-			do
-				printf "*";
-		
-			done
-		
-		done
-	
-}
-
-
-
 printf "\nGrade A : $a_count "
 draw_Hist $a_count
 printf "\nGrade B : $b_count "
