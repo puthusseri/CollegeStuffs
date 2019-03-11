@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         info = (TextView)findViewById(R.id.info);
         pickerDate = (DatePicker)findViewById(R.id.pickerdate);
         pickerTime = (TimePicker)findViewById(R.id.pickertime);
-        Calendar now = Calendar.getInstance();
+        Calendar nowr = Calendar.getInstance();
         pickerDate.init(
                 now.get(Calendar.YEAR),
                 now.get(Calendar.MONDAY),
