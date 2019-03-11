@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.PendingIntent;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 
@@ -21,7 +22,7 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity {
     private static final int MY_PERMISSIONS_REQUEST_SEND_SMS =0 ;
-    Button sendBtn;
+    Button sendBtn,phoneBtn;
     EditText txtphoneNo;
     EditText txtMessage;
     String phoneNo;
@@ -35,12 +36,22 @@ public class MainActivity extends Activity {
         sendBtn = (Button) findViewById(R.id.btnSendSMS);
         txtphoneNo = (EditText) findViewById(R.id.editText);
         txtMessage = (EditText) findViewById(R.id.editText2);
+        phoneBtn = (Button) findViewById(R.id.speeddial);
 
         sendBtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 sendSMSMessage();
             }
         });
+        phoneBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent phoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:7560817388"));
+                startActivity(phoneIntent);
+            }
+        });
+
+
     }
 
     protected void sendSMSMessage() {

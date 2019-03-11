@@ -34,10 +34,12 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         info = (TextView)findViewById(R.id.info);
         pickerDate = (DatePicker)findViewById(R.id.pickerdate);
         pickerTime = (TimePicker)findViewById(R.id.pickertime);
-        Calendar nowr = Calendar.getInstance();
+
+        Calendar now = Calendar.getInstance();
         pickerDate.init(
                 now.get(Calendar.YEAR),
                 now.get(Calendar.MONDAY),
