@@ -47,13 +47,14 @@ k=0						#continueing the printing
 l=0
 m=0			
 
-first_checking_flag=0
+first_checking_flag=0	#for skipping the first echo
+check_remaining=0
 					#for storing the student nos.
 while [ $p -gt 0 ]  || [ $q -gt 0 ] || [ $r -gt 0 ]
 do	
 	if [ $flag == 0 ]
 	then
-		if [ $p -ge 0 ] || [ $q -ge 0 ]
+		if [ $p -ge 0 ] && [ $q -ge 0 ]
 		then
 			p=$((p-20))
 			q=$((q-20))
@@ -76,13 +77,44 @@ do
 			done
 		else			
 			flag=1
-			#echo "working"
+			#print p r or q r
+			if [ $p -ge 0 ]
+			then
+			#echo "First"
+				for ((i=0; i<20; i=$((i+4))))
+				 do
+					printf "\n${s1[$k]} ${s5[$m]}		"			#Printing the roll nos 
+					printf "${s1[$((k+1))]} ${s5[$((m+1))]}		"
+					printf "${s1[$((k+2))]} ${s5[$((m+2))]}		"
+					printf "${s1[$((k+3))]} ${s5[$((m+3))]}		"
+					k=$((k+4))
+					m=$((m+4))
+				done
+				room_no=$((room_no+1))
+				echo "Room Noa: " $room_no
+			
+			elif [ $q -ge 0 ]
+				then
+				for ((i=0; i<20; i=$((i+4))))
+				 do
+					printf "\n${s3[$l]} ${s5[$m]}		"			#Printing the roll nos 
+					printf "${s3[$l+1]} ${s5[$m+1]}		"
+					printf "${s3[$l+2]} ${s5[$m+2]}		"
+					printf "${s3[$l+3]} ${s5[$m+3]}		"
+
+					m=$((m+4))
+					l=$((l+4))
+				done
+				room_no=$((room_no+1))
+				echo "Room Noa: " $room_no
+			fi
+			
 		fi
 	fi
 
 	if [ $flag == 1 ]
 	then
-		if [ $q -ge 0 ] || [ $r -ge 0 ]
+		if [ $q -ge 0 ] && [ $r -ge 0 ]
 		then
 		if [ $r -gt 20 ]
 			then
@@ -103,12 +135,40 @@ do
 				l=$((l+4))
 			done
 
-		else
 
-			q=$((q-20))
-			r=$((r-20))
+		else
 			flag=2
 			#echo "q=$q r=$r"
+			#print q p or p r
+			if [ $q -ge 0 ]
+			then
+
+			for ((i=0; i<20; i=$((i+4))))
+			 do
+				printf "\n${s1[$k]} ${s3[$l]}		"			#Printing the roll nos 
+				printf "${s1[$((k+1))]} ${s3[$((l+1))]}		"
+				printf "${s1[$((k+2))]} ${s3[$((l+2))]}		"
+				printf "${s1[$((k+3))]} ${s3[$((l+3))]}		"
+				k=$((k+4))
+				l=$((l+4))
+			done
+			room_no=$((room_no+1))
+				echo "Room Noa: " $room_no
+			
+			elif [ $r -ge 0 ]
+				then
+				for ((i=0; i<20; i=$((i+4))))
+				 do
+					printf "\n${s1[$k]} ${s5[$m]}		"			#Printing the roll nos 
+					printf "${s1[$((k+1))]} ${s5[$((m+1))]}		"
+					printf "${s1[$((k+2))]} ${s5[$((m+2))]}		"
+					printf "${s1[$((k+3))]} ${s5[$((m+3))]}		"
+					k=$((k+4))
+					m=$((m+4))
+				done
+				room_no=$((room_no+1))
+				echo "Room Nob: " $room_no
+			fi
 		fi
 		else
 			
@@ -119,7 +179,7 @@ do
 
 	if [ $flag == 2 ]
 	then
-		if [ $p -ge 0 ] || [ $r -ge 0 ]
+		if [ $p -ge 0 ] && [ $r -ge 0 ]
 		then
 			p=$((p-20))
 			r=$((r-20))
@@ -140,7 +200,37 @@ do
 		else
 			
 			flag=0
-			#echo "working"
+			#print p q or q r
+			if [ $p -ge 0 ]
+			then
+
+				for ((i=0; i<20; i=$((i+4))))
+				 do
+					printf "\n${s1[$k]} ${s3[$l]}		"			#Printing the roll nos 
+					printf "${s1[$((k+1))]} ${s3[$((l+1))]}		"
+					printf "${s1[$((k+2))]} ${s3[$((l+2))]}		"
+					printf "${s1[$((k+3))]} ${s3[$((l+3))]}		"
+					k=$((k+4))
+					l=$((l+4))
+				done
+				room_no=$((room_no+1))
+				echo "Room Noa: " $room_no
+			
+			elif [ $r -ge 0 ]
+				then
+			for ((i=0; i<20; i=$((i+4))))
+			 do
+				printf "\n${s3[$l]} ${s5[$m]}		"			#Printing the roll nos 
+				printf "${s3[$l+1]} ${s5[$m+1]}		"
+				printf "${s3[$l+2]} ${s5[$m+2]}		"
+				printf "${s3[$l+3]} ${s5[$m+3]}		"
+				m=$((m+4))
+				l=$((l+4))
+			done
+			room_no=$((room_no+1))
+				echo "Room Noc: " $room_no
+
+			fi
 		fi
 		
 		
