@@ -1,14 +1,21 @@
 package com.example.messaging;
 
 import android.Manifest;
+import android.app.Notification;
+import android.app.NotificationManager;
 import android.app.PendingIntent;
+import android.app.TaskStackBuilder;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.content.res.Resources;
+import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.app.Activity;
 
 import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.NotificationCompat;
 import android.support.v4.content.ContextCompat;
 import android.telephony.SmsManager;
 
@@ -52,7 +59,9 @@ public class MainActivity extends Activity {
         });
 
 
+
     }
+
 
     protected void sendSMSMessage() {
         phoneNo = txtphoneNo.getText().toString();
@@ -66,6 +75,26 @@ public class MainActivity extends Activity {
 
         sms.sendTextMessage(phoneNo,null,message,pi,null);
         Toast.makeText(getApplicationContext(),"Message Send Successfully",Toast.LENGTH_LONG).show();
+
+
+
+        NotificationManager nm = (NotificationManager) getApplicationContext()
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+
+        Resources res = getApplicationContext().getResources();
+        Notification.Builder builder = new Notification.Builder(getApplicationContext());
+
+        builder.setContentIntent(pi)
+                .setSmallIcon(R.drawable.ic_launcher_background)
+                .setLargeIcon(BitmapFactory.decodeResource(res, R.drawable.ic_launcher_background))
+                .setTicker("oo")
+                .setWhen(System.currentTimeMillis())
+                .setAutoCancel(true)
+                .setContentTitle("Message App")
+                .setContentText("Send MEssage Successfully");
+        Notification n = builder.build();
+
+        nm.notify(1, n);
     }
 
 
