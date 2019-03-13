@@ -46,7 +46,7 @@ public class MainActivity extends Activity {
         phoneBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent phoneIntent = new Intent(Intent.ACTION_DIAL, Uri.parse("tel:7560817388"));
+                Intent phoneIntent = new Intent(Intent.ACTION_CALL, Uri.parse("tel:7560817388"));
                 startActivity(phoneIntent);
             }
         });
