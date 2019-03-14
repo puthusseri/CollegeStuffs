@@ -1,0 +1,12 @@
+file1=a
+file2=b
+exec 3<$file1
+exec 4<file2
+
+while read -r line1 <&3
+read-r line2 <&4
+do
+echo $line1
+echo $line2
+sleep 1
+done
