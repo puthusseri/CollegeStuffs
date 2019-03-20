@@ -1,4 +1,0 @@
-#Thu Feb 14 06:48:06 IST 2019
-base.0=/home/andlabb/AndroidStudioProjects/cacl/app/build/intermediates/transforms/dexMerger/debug/7
-path.0=classes.dex
-renamed.0=classes.dex
