@@ -78,36 +78,7 @@ do
 		else			
 			flag=1
 			#print p r or q r
-			if [ $p -ge 0 ]
-			then
-			#echo "First"
-				for ((i=0; i<20; i=$((i+4))))
-				 do
-					printf "\n${s1[$k]} ${s5[$m]}		"			#Printing the roll nos 
-					printf "${s1[$((k+1))]} ${s5[$((m+1))]}		"
-					printf "${s1[$((k+2))]} ${s5[$((m+2))]}		"
-					printf "${s1[$((k+3))]} ${s5[$((m+3))]}		"
-					k=$((k+4))
-					m=$((m+4))
-				done
-				room_no=$((room_no+1))
-				echo "Room Noa: " $room_no
-			
-			elif [ $q -ge 0 ]
-				then
-				for ((i=0; i<20; i=$((i+4))))
-				 do
-					printf "\n${s3[$l]} ${s5[$m]}		"			#Printing the roll nos 
-					printf "${s3[$l+1]} ${s5[$m+1]}		"
-					printf "${s3[$l+2]} ${s5[$m+2]}		"
-					printf "${s3[$l+3]} ${s5[$m+3]}		"
-
-					m=$((m+4))
-					l=$((l+4))
-				done
-				room_no=$((room_no+1))
-				echo "Room Noa: " $room_no
-			fi
+		
 			
 		fi
 	fi
@@ -140,35 +111,7 @@ do
 			flag=2
 			#echo "q=$q r=$r"
 			#print q p or p r
-			if [ $q -ge 0 ]
-			then
-
-			for ((i=0; i<20; i=$((i+4))))
-			 do
-				printf "\n${s1[$k]} ${s3[$l]}		"			#Printing the roll nos 
-				printf "${s1[$((k+1))]} ${s3[$((l+1))]}		"
-				printf "${s1[$((k+2))]} ${s3[$((l+2))]}		"
-				printf "${s1[$((k+3))]} ${s3[$((l+3))]}		"
-				k=$((k+4))
-				l=$((l+4))
-			done
-			room_no=$((room_no+1))
-				echo "Room Noa: " $room_no
 			
-			elif [ $r -ge 0 ]
-				then
-				for ((i=0; i<20; i=$((i+4))))
-				 do
-					printf "\n${s1[$k]} ${s5[$m]}		"			#Printing the roll nos 
-					printf "${s1[$((k+1))]} ${s5[$((m+1))]}		"
-					printf "${s1[$((k+2))]} ${s5[$((m+2))]}		"
-					printf "${s1[$((k+3))]} ${s5[$((m+3))]}		"
-					k=$((k+4))
-					m=$((m+4))
-				done
-				room_no=$((room_no+1))
-				echo "Room Nob: " $room_no
-			fi
 		fi
 		else
 			
@@ -201,36 +144,7 @@ do
 			
 			flag=0
 			#print p q or q r
-			if [ $p -ge 0 ]
-			then
-
-				for ((i=0; i<20; i=$((i+4))))
-				 do
-					printf "\n${s1[$k]} ${s3[$l]}		"			#Printing the roll nos 
-					printf "${s1[$((k+1))]} ${s3[$((l+1))]}		"
-					printf "${s1[$((k+2))]} ${s3[$((l+2))]}		"
-					printf "${s1[$((k+3))]} ${s3[$((l+3))]}		"
-					k=$((k+4))
-					l=$((l+4))
-				done
-				room_no=$((room_no+1))
-				echo "Room Noa: " $room_no
 			
-			elif [ $r -ge 0 ]
-				then
-			for ((i=0; i<20; i=$((i+4))))
-			 do
-				printf "\n${s3[$l]} ${s5[$m]}		"			#Printing the roll nos 
-				printf "${s3[$l+1]} ${s5[$m+1]}		"
-				printf "${s3[$l+2]} ${s5[$m+2]}		"
-				printf "${s3[$l+3]} ${s5[$m+3]}		"
-				m=$((m+4))
-				l=$((l+4))
-			done
-			room_no=$((room_no+1))
-				echo "Room Noc: " $room_no
-
-			fi
 		fi
 		
 		
@@ -242,23 +156,3 @@ done
 
 
 
-
-: 'echo $p
-echo $p_quo
-
-echo $q
-echo $q_quo
-
-echo $r
-echo $r_quo
-'
-
-
-: 'for ((i=0; i<40; i=$((i+8))))
-do
-	printf "${class1[$i]} ${class1[$((i+1))]}		"
-	printf "${class1[$((i+2))]} ${class1[$((i+3))]}		"
-	printf "${class1[$((i+4))]} ${class1[$((i+5))]}		"
-	printf "${class1[$((i+6))]} ${class1[$((i+7))]}\n"
-done>class1.txt
-'
