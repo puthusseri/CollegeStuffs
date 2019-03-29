@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Tutorial5</string>
+    <string name="tutorial_5">TUTORIAL 5</string>
+    <string name="male">MALE</string>
+    <string name="female">FEMALE</string>
+    <string name="selected_gender">SELECTED GENDER :</string>
 </resources>
