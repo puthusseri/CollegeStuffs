@@ -12,6 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button nextButton;
     ImageView imageView;
+    int count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +24,22 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+                if(count == 0 ) {
+                    imageView.setImageDrawable(getDrawable(R.drawable.img1));
+                    count = 1;
+                } else if(count == 1){
+                    imageView.setImageDrawable(getDrawable(R.drawable.img2));
+                    count = 2;
+                } else if(count == 2){
+                    imageView.setImageDrawable(getDrawable(R.drawable.img3));
+                    count = 3;
+                }else if(count == 3){
+                    imageView.setImageDrawable(getDrawable(R.drawable.rose));
+                    count = 4;
+                }else {
+                    imageView.setImageDrawable(getDrawable(R.drawable.dora));
+                    count = 0;
+                }
             }
         });
     }
