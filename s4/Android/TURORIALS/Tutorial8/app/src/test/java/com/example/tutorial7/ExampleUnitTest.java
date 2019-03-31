@@ -1,4 +1,4 @@
-package com.example.tutorial8;
+package com.example.tutorial7;
 
 import org.junit.Test;
 
