@@ -24,7 +24,8 @@
             android:id="@+id/imageView"
             android:layout_width="match_parent"
             android:layout_height="426dp"
-            app:srcCompat="@mipmap/img1" />
+            android:contentDescription="TODO"
+            android:src="@drawable/dora" />
 
         <Button
             android:id="@+id/button"
