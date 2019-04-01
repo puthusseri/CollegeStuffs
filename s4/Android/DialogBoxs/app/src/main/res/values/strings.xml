@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">DialogBoxs</string>
+    <array name="li">
+        <item>VYSHAK</item>
+        <item>VISHNU</item>
+        <item>YEDHU</item>
+        <item>3</item>
+
+
+
+    </array>
 </resources>
