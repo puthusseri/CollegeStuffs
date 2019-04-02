@@ -1,0 +1,17 @@
+#include<stdio.h>
+
+void main()
+{
+	int n;
+	char a;
+	printf("\nEnter a ASCII value :");
+	scanf("%d",&n);
+	printf("\nThe character for %d is %c\n",n,n);
+	printf("\nEnter a character :");
+	
+	scanf(" %c",&a);
+	printf("\nThe INTEGER value for %c is %d\n",a,a);
+			
+	
+}
+		

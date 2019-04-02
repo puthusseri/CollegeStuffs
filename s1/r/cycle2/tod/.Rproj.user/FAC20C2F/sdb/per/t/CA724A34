@@ -1,0 +1,18 @@
+{
+    "contents" : "p<-rnorm(1000,mean=3,sd=1)\nxbar=c()\nfor(i in 10:100)\n{\n  data<-sample(p,i,FALSE)\n  xbar<-c(xbar,mean(data))\n}\nplot(c(10:100),xbar,type=\"l\")",
+    "created" : 1510566563901.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "119172127",
+    "id" : "CA724A34",
+    "lastKnownWriteTime" : 1510569499,
+    "path" : "~/vyshu/r/cycle2/cp/10.r",
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

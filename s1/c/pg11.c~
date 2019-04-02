@@ -1,0 +1,7 @@
+#include<stdio.h>
+void main()
+{
+	int amount=500000,year=10,rate=8;
+	int simple_interest=(amount*year*rate)/100;
+	printf("\nThe simple rates earned by the employee is : %d\n\n",simple_interest);
+}

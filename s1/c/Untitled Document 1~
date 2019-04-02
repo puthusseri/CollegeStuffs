@@ -1,0 +1,22 @@
+#include<stdio.h>
+void main()
+{
+	int n;
+	char a;
+	printf("*******************************************************");
+	printf("\nEnter 1. Lowercase-Uppercase    2.Uppercase-LOwercase\n");
+	printf("*******************************************************\n");
+	scanf("%d",&n);
+	switch(n)
+	{
+		case 1: printf("\nEnter a ASCII value :");
+			scanf("%d",&n);
+			printf("\nThe character for %d is %c\n",n,n);
+			break;
+		case 2: printf("\nEnter a character :");
+			scanf(" %c",&a);
+			printf("\nThe INTEGER value for %c is %d\n",a,a);
+			break;
+	}
+}
+	

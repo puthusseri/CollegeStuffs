@@ -1,0 +1,98 @@
+/************************************************************************/
+/* Name of the Program	:	classify_age.c		                */
+/* Aim			:	To ages of 5 persons		        */
+/* Author		:	Vyshak Puthusseri		        */
+/* Date Written		:	22/09/2017				*/
+/* Revision		:	1					*/
+/************************************************************************/
+
+/************************************************************************/
+/* Program								*/
+
+/* i			:	Variable used in while loop		*/
+/* a[]			:	An array to store age of 5 persons	*/
+/* baby			:	Number of persons with age 0  to  5	*/
+/* student		:	Number of persons with age 6  to  17	*/
+/* adult		:	Number of persons with age 18 and over	*/
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+	int a[5],i,baby,student,adult;
+	i=baby=student=adult=0;
+	printf("\nEnter the ages of 5 persons  : \n");
+	while(i<5)
+	{
+		printf("\nPerson %d : ",i+1);
+		scanf("%d",&a[i]);
+		if(a[i]>=0&&a[i]<=5)
+		{
+			baby++;
+		}
+		else if(a[i]>=6&&a[i]<=17)	
+		{
+			student++;
+		}
+		else
+		{
+			adult++;
+		}
+
+		i++;
+		
+	}
+	printf("\n---------------------------\n");
+	printf("\nBaby \t Student  Adult\n");
+	printf("\n---------------------------\n");
+	printf("%3d\t%4d\t%5d\n",baby,student,adult);
+	printf("\n---------------------------\n");
+
+	
+
+}
+	
+
+
+
+/************************************************************************/
+
+
+
+
+
+/************************************************************************/
+
+/* Output	:							
+
+Enter the ages of 5 persons  : 
+
+Person 1 : 1
+
+Person 2 : 29
+
+Person 3 : 88
+
+Person 4 : 56
+
+Person 5 : 12
+
+---------------------------
+
+Baby 	 Student  Adult
+
+---------------------------
+  1	   1	    3
+
+---------------------------
+					
+									 
+
+*/
+
+									
+
+

@@ -1,0 +1,8 @@
+
+        price of items (Rs.)          discount factor             sales volumes
+        state1  state2 state3       state1  state2 state3       state1  state2 state3
+item1   50      55      45          0.90    0.84    0.80        570     610     700
+item2   75      85      70          0.95    0.86    0.90        720     900     850
+item3   125     139     155         0.93    0.87    0.91        820     910     760
+
+

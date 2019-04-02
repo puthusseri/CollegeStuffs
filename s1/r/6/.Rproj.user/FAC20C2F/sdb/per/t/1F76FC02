@@ -1,0 +1,18 @@
+{
+    "contents" : "price=read.table(\"price.txt\",header = TRUE)\nmean_value=apply(price,2,mean)\nmean_value=c(\"Mean\",mean_value[-1])\nstandard_deviation=apply(price, 2, sd)\nstandard_deviation=c(\"SD\",standard_deviation[-1])\nmedian_value=apply(price, 2,median)\nmedian_value=c(\"Median\",median_value[-1])\nresult=rbind(price,mean_value)\nresult=rbind(result,median_value)\nresult=rbind(result,standard_deviation)\nsink(file = \"outputprice.txt\")\ncat(\"--------------------------\\n\")\ncat(\"The resulting table\\n\")\nprint(result)\ncat(\"--------------------------\\n\")\nplot(price$No,price$item2,type=\"l\")\nlines(price$No,price$item1,col=\"red\")\nlines(price$No,price$item3,col=\"green\")\nsink()\n\n",
+    "created" : 1507786755942.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2308877882",
+    "id" : "1F76FC02",
+    "lastKnownWriteTime" : 1508753104,
+    "path" : "~/vyshu/r/6/6.R",
+    "project_path" : "6.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

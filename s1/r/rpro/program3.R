@@ -1,0 +1,6 @@
+cat("\Enter the limit:")
+n=scan(n=1)
+cat("\Enter the value for x:")
+x=scan(n=1)
+nos=seq(1,n,by=2)
+sum1=((pi/2)+2*(sum(sin(s*x)/s)))

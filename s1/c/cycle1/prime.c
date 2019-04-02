@@ -1,0 +1,9 @@
+#include<stdio.h>
+void main()
+{
+	int n,i;
+	printf("\nEnter the limit:");
+	scanf("%d",&n);
+	for(i=2;i<=n/2;i++)
+	{
+		for(

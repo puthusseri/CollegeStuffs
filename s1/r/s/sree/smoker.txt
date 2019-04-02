@@ -1,0 +1,4 @@
+"High"	"Low"	"Middle"
+"current"	51	43	22
+"former"	92	28	21
+"never"	68	22	9

@@ -1,0 +1,5 @@
+"High" "Low" "Middle" "Sum"
+"current" 51 43 22 116
+"former" 92 28 21 141
+"never" 68 22 9 99
+"Sum" 211 93 52 356

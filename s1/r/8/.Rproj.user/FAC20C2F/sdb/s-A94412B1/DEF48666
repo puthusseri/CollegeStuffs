@@ -1,0 +1,17 @@
+{
+    "contents" : "dataset <- mtcars[,c(\"mpg\",\"disp\",\"hp\",\"wt\")]\ndataset\nmodel=reg=lm(formula = mpg ~ disp + hp + wt, data = dataset)\nmodel\na <- coef(model)[1]\nprint(a)\ndisp <- coef(model)[2]\nhp <- coef(model)[3]\nwt <- coef(model)[4]\ndisp\nhp\nwt\ntail(predict(model))\ntail(resid(model))\na=data.frame(disp = 221,hp = 102,wt=2.91)\nresult_a=predict(model,a)\nresult_a\n\n",
+    "created" : 1509089985311.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "2560827536",
+    "id" : "DEF48666",
+    "lastKnownWriteTime" : 1509091999,
+    "path" : "~/vyshu/r/s/sree/lab.9.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 2,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

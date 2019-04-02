@@ -1,0 +1,17 @@
+{
+    "contents" : "x=read.table(file = \"sales.txt\",skip = 3)\na=matrix(c(x$V2,x$V3,x$V4),nrow = 3,ncol = 3)\nb=matrix(c(x$V5,x$V6,x$V7),nrow = 3,ncol = 3)\nc=matrix(c(x$V8,x$V9,x$V10),nrow = 3,ncol = 3)\nd=a*b*c\nrownames(d)=c(\"item1\",\"item2\",\"item3\")\ncolnames(d)=c(\"state1\",\"state2\",\"state3\")\nsink(file = \"salesout.txt\",split=2)\ncat(\"\\n------------TOTAL BILL------------\\n\")\nprint(d)\nsink()\n",
+    "created" : 1508835600061.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "174630001",
+    "id" : "7C701015",
+    "lastKnownWriteTime" : 1508835526,
+    "path" : "~/vyshu/r/4/salespro.R",
+    "project_path" : "salespro.R",
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

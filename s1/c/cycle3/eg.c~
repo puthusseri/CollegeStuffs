@@ -1,0 +1,7 @@
+#include<stdio.h>
+void fun_in_anotherfile()
+{
+	printf("\nFunction in another file has been called");
+}
+
+

@@ -1,0 +1,13 @@
+tos=c(1:6)
+d=table(sample(tos,1000,replace = TRUE))
+p=prop.table(d)
+p=addmargins(p)
+plot(p,main="distribution",xlab="faces",ylab="no.of times")
+
+sink("out2.txt")
+cat("---------------------------------------------\n")
+cat("                   OUTPUT                      \n")
+cat("---------------------------------------------\n")
+print(d)
+print(p)
+sink()

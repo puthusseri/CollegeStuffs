@@ -1,0 +1,27 @@
+=======================
+Summary data of smokers
+=======================
+         
+          High Low Middle Sum
+  current   51  43     22 116
+  former    92  28     21 141
+  never     68  22      9  99
+  Sum      211  93     52 356
+=========================================
+Joint probability distribution of smokers
+=========================================
+         
+            High    Low Middle    Sum
+  current 0.1433 0.1208 0.0618 0.3258
+  former  0.2584 0.0787 0.0590 0.3961
+  never   0.1910 0.0618 0.0253 0.2781
+  Sum     0.5927 0.2612 0.1461 1.0000
+======================================
+Percentage of smokers in each category
+======================================
+         
+            High    Low Middle    Sum
+  current  14.33  12.08   6.18  32.58
+  former   25.84   7.87   5.90  39.61
+  never    19.10   6.18   2.53  27.81
+  Sum      59.27  26.12  14.61 100.00

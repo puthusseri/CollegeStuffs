@@ -1,0 +1,10 @@
+#include<stdio.h>
+void main()
+{
+	int inch;
+	float centimetre;
+	printf("Enter the distance in inches :  ");
+	scanf("%d",&inch);
+	centimetre=inch*2.54;
+	printf("\n\n%d inch   =  %f cm \n\n",inch,centimetre);
+}

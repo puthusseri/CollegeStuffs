@@ -15,8 +15,8 @@
 int main() { 
 	int sockfd; 
 	char buffer[MAXLINE]; 
-	//char *hello = "Hello from client";
-	char hello[200];
+	char *hello = "Hello from client";
+	
 	printf("\nEnter the message :");
 	scanf("%s",hello); 
 	struct sockaddr_in	 servaddr; 

@@ -1,0 +1,18 @@
+{
+    "contents" : "patients=c(\"40-45\",\"45-50\",\"50-55\",\"55-60\")\nbp=c(\"low\",\"mid\",\"high\")\nx=sample(patients,1000,replace = TRUE)\ny=sample(bp,1000,replace = TRUE)\na=table(x,y)\n\n\nper=prop.table(a)*100\nprint(per)\nprint(sum(per))\nsink(\"5th_output.txt\")\ncat(\"\\nPercentage of people having BP with ages.\\n\")\ncat(\"----------------------------------------------\\n\")\nprint(per)\nsink()\n\n",
+    "created" : 1507784163330.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3483977720",
+    "id" : "DC48DAE2",
+    "lastKnownWriteTime" : 1508836422,
+    "path" : "~/vyshu/r/5/5.R",
+    "project_path" : "5.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

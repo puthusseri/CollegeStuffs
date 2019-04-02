@@ -1,0 +1,14 @@
+	=========SUMMARY==========
+       ID             Smoke         SES     
+ Min.   :  1.00   current:116   High  :211  
+ 1st Qu.: 89.75   former :141   Low   : 93  
+ Median :178.50   never  : 99   Middle: 52  
+ Mean   :178.50                             
+ 3rd Qu.:267.25                             
+ Max.   :356.00                             
+         
+          High Low Middle
+  current   51  43     22
+  former    92  28     21
+  never     68  22      9
+	==============PROPORTION=============

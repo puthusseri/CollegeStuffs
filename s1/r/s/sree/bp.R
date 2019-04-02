@@ -1,0 +1,15 @@
+age_group<-sample(c("40-45","45-50","50-55","55-60"), size=1000, replace=TRUE)
+bp<-sample(c("low","mid","high"),size=1000,replace=TRUE)
+patient_data<-data.frame(age_group,bp)
+table1<-table(patient_data)
+patient_prob<-prop.table(table1)
+patient_prob
+percentage<-patient_prob*100
+percentage2<-addmargins(percentage)
+sink("patient-data.txt",split = 5)
+cat("======================================================\n")
+cat("Percentage of people having BP in different age groups\n")
+cat("======================================================\n")
+print(percentage2)
+cat("======================================================\n")
+sink()

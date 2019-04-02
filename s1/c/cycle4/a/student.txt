@@ -1,0 +1,21 @@
+NAME	ROLLNO	MATHS	PROGRAMMING C	DATASTRUCTURE
+
+aa	1	79	89	90
+
+df	2	86	85	84
+
+dsf	4	90	89	82
+
+asdfg	5	78	69	90
+
+er	6	85	80	81
+
+9	55	83	75	77
+
+jesee	88	76	81	80
+
+ki	97	62	75	82
+
+yt	288	85	82	67
+
+sdad	111	80	67	69

@@ -1,0 +1,7 @@
+x<-c(1,3,5,7,9)
+y<-c(2,4,6,8,10)
+plot(x,y)
+lm(y~x)
+abline(1,2)
+abline(lm(y~x))
+cor(x,y)

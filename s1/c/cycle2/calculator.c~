@@ -1,0 +1,86 @@
+/************************************************************************/
+/* Name of the Program	:	calculator.c		                */
+/* Aim			:	To implement a basic calculator	        */
+/* Author		:	Vyshak Puthusseri		        */
+/* Date Written		:	22/09/2017				*/
+/* Revision		:	1					*/
+/************************************************************************/
+
+/************************************************************************/
+/* Program								*/
+
+/* a			:	To store first value			*/
+/* b			:	To store second value			*/
+/* op			:	To store operator			*/
+/* result		:	To store result 			*/
+
+
+
+
+
+#include<stdio.h>
+void main()
+{
+	int a,b;
+	float result;
+	char op;
+	printf("\nEnter the first value  : ");
+	scanf("%d",&a);
+	printf("\nEnter the second value : ");
+	scanf("%d",&b);		
+	printf("\nEnter the operator     : ");
+	scanf(" %c",&op);
+
+	switch(op)
+	{
+		case '+': result=a+b;
+			  break;
+		case '-': result=a-b;
+			  break;
+		case '*': result=a*b;
+			  break;
+		case '/': result=a/b;
+			  break;
+		case '%': result=a%b;
+			  break;
+		default : printf("\nEnter a valid operator :\n");
+	}
+	
+	printf("\n%d %c %d = %.3f",a,op,b,result);
+}
+	
+
+
+
+/************************************************************************/
+
+
+
+
+
+/************************************************************************/
+
+/* Output	:							
+
+
+Enter a Number : 5
+
+The number 5 is positive.
+Enter 1.To continue 0. To exit : 1
+
+Enter a Number : -1
+
+The number -1 is negative.
+Enter 1.To continue 0. To exit : 1
+
+Enter a Number : 0
+
+The number 0 is zero.
+Enter 1.To continue 0. To exit : 0							
+									 
+
+*/
+
+									
+
+

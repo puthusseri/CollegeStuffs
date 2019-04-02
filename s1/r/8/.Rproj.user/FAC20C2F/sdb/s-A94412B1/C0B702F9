@@ -1,0 +1,17 @@
+{
+    "contents" : "month=c(1:12)\nsales=c(105,135,120,105,90,120,145,140,100,80,100,110)\nplot(month,sales)\nmoving_average=c()\nfor(i in 1:length(sales))\n{\n  if((i==1)||(i==length(sales)))\n    moving_average[i]=sales[i]\n  else\n    moving_average[i]<-(sales[i-1]+sales[i]+sales[i+1])/3\n}\nprint(month)\nprint(moving_average)\nlines(month,moving_average)\n",
+    "created" : 1509092119367.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "273079579",
+    "id" : "C0B702F9",
+    "lastKnownWriteTime" : 1509092103,
+    "path" : "~/vyshu/r/7/7.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

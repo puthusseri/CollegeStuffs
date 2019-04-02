@@ -1,0 +1,28 @@
+================================
+
+	Price of Item
+      state1 state2 state3
+item1     50     55     45
+item2     75     85     70
+item3    125    139    155
+================================
+	Discount Factor
+
+      state1.1 state2.1 state3.1
+item1     0.90     0.84     0.80
+item2     0.95     0.86     0.90
+item3     0.93     0.87     0.91
+================================
+	Sales Volume
+
+      state1.2 state2.2 state3.2
+item1      570      610      700
+item2      720      900      850
+item3      820      910      760
+================================
+		Sales bill
+
+      state1   state2 state3
+item1  25650  28182.0  25200
+item2  51300  65790.0  53550
+item3  95325 110046.3 107198

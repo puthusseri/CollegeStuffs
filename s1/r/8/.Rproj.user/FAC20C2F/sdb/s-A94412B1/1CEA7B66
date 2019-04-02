@@ -1,0 +1,17 @@
+{
+    "contents" : "height_x=c(151,174,138,186,128,136,179,163,152,131)\nweight_y=c(63,81,56,91,47,57,76,72,62,48)\nreg_model=lm(weight_y ~ height_x)\nprint(\"Summary of regression\")\nsummary(reg_model)\nprint(\"Residuals\")\nresid(reg_model)\n\nprint(\"Predicted weights\")\npredict(reg_model)\na=data.frame(height_x=170)\nb=data.frame(height_x=180)\nresult_a=predict(reg_model,a)\nresult_b=predict(reg_model,b)\nresult_a\nresult_b\nplot(weight_y,height_x,main=\"REGRESSION LINE\",abline(lm(height_x ~ weight_y)))\n",
+    "created" : 1509088847651.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1522706634",
+    "id" : "1CEA7B66",
+    "lastKnownWriteTime" : 1509090734,
+    "path" : "~/vyshu/r/s/sree/lab8.R",
+    "project_path" : null,
+    "properties" : {
+    },
+    "relative_order" : 1,
+    "source_on_save" : true,
+    "type" : "r_source"
+}

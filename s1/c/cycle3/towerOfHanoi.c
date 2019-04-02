@@ -1,0 +1,55 @@
+/************************************************************************/
+/* Name of the Program	:	towerOfHanoi.c		                */
+/* Aim			:	To demonstrate Tower of Hanoi problem   */
+/* Author		:	Vyshak Puthusseri		        */
+/* Date Written		:	03/11/2017				*/
+/* Revision		:	1					*/
+/************************************************************************/
+
+/************************************************************************/
+/* Program								*/
+/* n			:	To store no of disk			*/
+/* source		:	Name of source peg			*/
+/* dest			:	Name of destination peg			*/
+/* aux			:	Name of auxilary peg			*/
+/************************************************************************/
+
+#include<stdio.h>
+
+void towerOfHanoi(int n,char source[],char dest[],char aux[])
+{
+	if(n>0)
+	{
+		towerOfHanoi(n-1,source,aux,dest);
+		printf("Move disk %d from %-11s  to %-10s \n",n,source,dest);
+		towerOfHanoi(n-1,aux,dest,source);
+	}
+}
+		
+void main()
+{
+	int n;
+	printf("\nEnter the no. of disks :");
+	scanf("%d",&n);
+	
+	towerOfHanoi(n,"Source","Destination","Aux");
+}
+
+/************************************************************************/
+
+/* Output	:							
+
+Enter the no. of disks :3
+Move disk 1 from Source       to Destination 
+Move disk 2 from Source       to Aux        
+Move disk 1 from Destination  to Aux        
+Move disk 3 from Source       to Destination 
+Move disk 1 from Aux          to Source     
+Move disk 2 from Aux          to Destination 
+Move disk 1 from Source       to Destination 					
+									 
+
+*/
+
+
+
