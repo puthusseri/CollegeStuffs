@@ -6,13 +6,7 @@
     </shared>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="684b0fab-7781-45a6-a045-9ea0a6d6ffbf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../Tutorial6/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial6/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorial_10/app/src/main/java/com/example/tutorial_10/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial_10/app/src/main/java/com/example/tutorial_10/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Tutorial_10/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Tutorial_10/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/tutorial/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/tutorial/MainActivity.java" afterDir="false" />
-    </list>
+    <list default="true" id="684b0fab-7781-45a6-a045-9ea0a6d6ffbf" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,6 +24,7 @@
     <session id="573382869">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.opened" value="1" />
         </counts>
@@ -241,7 +236,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" visible="true" weight="0.32988048" />
       <window_info id="Structure" side_tool="true" />

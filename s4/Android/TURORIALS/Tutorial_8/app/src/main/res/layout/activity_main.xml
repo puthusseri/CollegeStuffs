@@ -21,11 +21,12 @@
         app:layout_constraintTop_toTopOf="parent"
         android:background="@drawable/img2">
 
-        <Button
+
+        <ImageButton
             android:id="@+id/button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="change" />
+            android:layout_width="300dp"
+            android:layout_height="150dp"
+            android:src="@drawable/dora" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>
