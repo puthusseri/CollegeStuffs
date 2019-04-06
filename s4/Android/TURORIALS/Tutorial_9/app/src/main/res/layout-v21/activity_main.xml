@@ -11,14 +11,16 @@
         android:layout_height="match_parent">
 
         <TimePicker
+            android:id="@+id/timePicker"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/timePicker"></TimePicker>
+            android:timePickerMode="spinner">
+
+        </TimePicker>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/display"
-            android:layout_below="@+id/timePicker"/>
+            android:id="@+id/display"/>
     </RelativeLayout>
 
 </android.support.constraint.ConstraintLayout>

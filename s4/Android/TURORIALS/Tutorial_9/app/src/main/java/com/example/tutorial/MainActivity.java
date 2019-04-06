@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
         timePicker =findViewById(R.id.timePicker);
         textView = findViewById(R.id.display);
 
-        textView.setText(timePicker.getHour()+ " : "+timePicker.getMinute()+" : ");
+        textView.setText("Current Time : "+timePicker.getHour()+ " : "+timePicker.getMinute()+"  ");
         timePicker.setOnTimeChangedListener(new TimePicker.OnTimeChangedListener() {
             @Override
             public void onTimeChanged(TimePicker view, int hourOfDay, int minute) {
