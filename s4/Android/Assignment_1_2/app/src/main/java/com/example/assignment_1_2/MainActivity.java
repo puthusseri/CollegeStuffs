@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
                 if(str.equals("admin") && str2.equals("admin")) {
                     Intent i = new Intent(getApplicationContext(),Main2Activity.class);
                     i.putExtra("username",str);
+                    startActivity(i);
                 }
                 else
                 {
