@@ -1,0 +1,17 @@
+
+<resources>
+<string name="app_name">SingleChoiceDialog</string>
+
+<string-array name="Gender">
+    <item>Male</item>
+    <item>Female</item>
+    <item>Others</item>
+
+</string-array>
+    <string-array name="Course">
+        <item>DATA ANALYSIS</item>
+    <item>Datamining</item>
+    <item>Machine Learning</item>
+    <item>Olakkaaa</item>
+    </string-array>
+</resources>

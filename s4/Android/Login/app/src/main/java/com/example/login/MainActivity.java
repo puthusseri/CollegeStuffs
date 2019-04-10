@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
         button = (Button)findViewById(R.id.button);
         str = username.getText().toString();
         str2 = password.getText().toString();
-        str = username.getText();
+
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,8 +32,9 @@ public class MainActivity extends AppCompatActivity {
                 i.putExtra("username",str);
                 startActivity(i);
 
+                Toast.makeText(getApplicationContext(),str.toString(),Toast.LENGTH_LONG).show();
 
-                Toast.makeText(getApplicationContext(),"The username or password is invalid",Toast.LENGTH_LONG).show();
+               // Toast.makeText(getApplicationContext(),"The username or password is invalid",Toast.LENGTH_LONG).show();
 
 
             }
