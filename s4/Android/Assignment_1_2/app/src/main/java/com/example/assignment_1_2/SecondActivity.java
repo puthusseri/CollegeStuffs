@@ -11,8 +11,8 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
-//        Intent i = getIntent();
-//        String str = i.getStringExtra("username");
-//        display.setText("Username : "+str);
+      Intent i = getIntent();
+      String str = i.getStringExtra("username");
+       display.setText("Username : "+str);
     }
 }
