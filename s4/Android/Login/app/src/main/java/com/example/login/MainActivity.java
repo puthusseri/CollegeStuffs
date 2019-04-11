@@ -28,7 +28,7 @@ public class MainActivity extends AppCompatActivity {
                     i.putExtra("username", str);
                     startActivity(i);
                 } else {
-                    Toast.makeText(getApplicationContext(), str.toString(), Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Invalid credinals ! Try again.", Toast.LENGTH_LONG).show();
                 }
             }
         });
