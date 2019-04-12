@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "91386441523",
+    "firebase_url": "https://databasetutorial-31892.firebaseio.com",
+    "project_id": "databasetutorial-31892",
+    "storage_bucket": "databasetutorial-31892.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:91386441523:android:ab75759aa0a5f353",
+        "android_client_info": {
+          "package_name": "com.example.databasetutorial"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "91386441523-qddilrleebddvf6cnf9imjvn4sbqimda.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyADnXb0J0i9PePjbB7YtPrc4RyKB5zJxX8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "91386441523-qddilrleebddvf6cnf9imjvn4sbqimda.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
