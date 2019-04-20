@@ -1,5 +1,7 @@
 package com.example.sqlite;
 
+import android.database.Cursor;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -11,7 +13,7 @@ public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper myDb;
     EditText editName,editSurname,editMarks;
-    Button addButton;
+    Button addButton,viewButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +25,9 @@ public class MainActivity extends AppCompatActivity {
         editSurname = (EditText)findViewById(R.id.editText3);
         editMarks = (EditText)findViewById(R.id.editText5);
         addButton = (Button)findViewById(R.id.button);
+        viewButton = (Button)findViewById(R.id.button2);
         AddData();
+        ViewAllData();
     }
 
     public void AddData() {
@@ -40,5 +44,36 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+    }
+    public void ViewAllData(){
+        viewButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor res = myDb.getAllData();
+                if(res.getCount() == 0) {
+                    //No data available
+                    showMessage("Error","No data Found");
+                    return;
+                }
+                StringBuffer buffer = new StringBuffer();
+                while (res.moveToNext()) {
+                     buffer.append("id :"+res.getString(0)+"\n");
+                     buffer.append("name :"+res.getString(1)+"\n");
+                     buffer.append("surname :"+res.getString(2)+"\n");
+                     buffer.append("marks :"+res.getString(3)+"\n\n");
+                }
+                //Show mesg
+                showMessage("Data",buffer.toString());
+            }
+        });
+    }
+    public void showMessage(String title, String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setCancelable(true);
+        builder.setTitle(title);
+        builder.setMessage(message);
+        builder.show();
+
+
     }
 }
