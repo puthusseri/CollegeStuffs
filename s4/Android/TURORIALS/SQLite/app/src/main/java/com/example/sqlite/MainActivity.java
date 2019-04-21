@@ -12,8 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper myDb;
-    EditText editName,editSurname,editMarks;
-    Button addButton,viewButton;
+    EditText editName,editSurname,editMarks,editID;
+    Button addButton,viewButton,updateButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,14 +22,37 @@ public class MainActivity extends AppCompatActivity {
         myDb = new DatabaseHelper(this);
 
         editName = (EditText)findViewById(R.id.editText2);
+        editID = (EditText)findViewById(R.id.editTextID);
         editSurname = (EditText)findViewById(R.id.editText3);
         editMarks = (EditText)findViewById(R.id.editText5);
         addButton = (Button)findViewById(R.id.button);
         viewButton = (Button)findViewById(R.id.button2);
+        viewButton = (Button)findViewById(R.id.button2);
+        updateButton = (Button)findViewById(R.id.button3);
         AddData();
         ViewAllData();
+        UpdateData();
     }
 
+    public void UpdateData() {
+        updateButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean isUpdated = myDb.updateData(editID.getText().toString(),
+                        editName.getText().toString(),
+                        editSurname.getText().toString(),
+                        editMarks.getText().toString());
+                if(isUpdated == true)
+                {
+                    Toast.makeText(MainActivity.this,"Updated Successfully",Toast.LENGTH_LONG).show();
+                }
+                else
+                {
+                    Toast.makeText(MainActivity.this,"Not Updated",Toast.LENGTH_LONG).show();
+                }
+            }
+        });
+    }
     public void AddData() {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override

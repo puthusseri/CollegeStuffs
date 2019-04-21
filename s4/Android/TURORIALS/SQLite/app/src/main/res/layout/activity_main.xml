@@ -28,7 +28,7 @@
 
             <TextView
                 android:id="@+id/textView2"
-                android:layout_width="wrap_content"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:text="NAME :   " />
@@ -37,6 +37,7 @@
                 android:id="@+id/editText2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
                 android:layout_weight="0"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -49,7 +50,7 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="77dp"
+                android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:text="SURNAME" />
@@ -58,7 +59,8 @@
                 android:id="@+id/editText3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_marginStart="20dp"
+                android:layout_weight="0"
                 android:ems="10"
                 android:inputType="textPersonName"
                 android:text="" />
@@ -70,7 +72,7 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="66dp"
+                android:layout_width="@android:dimen/notification_large_icon_width"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
                 android:text="MARKS" />
@@ -79,9 +81,11 @@
                 android:id="@+id/editText5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="25dp"
                 android:layout_weight="0"
                 android:ems="10"
-                android:inputType="textPersonName" />
+                android:inputType="textPersonName"
+                android:padding="10dp" />
         </LinearLayout>
 
         <Button
@@ -95,5 +99,19 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="DISPLAY ALL" />
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="UPDATE" />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/editTextID"/>
+</LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
