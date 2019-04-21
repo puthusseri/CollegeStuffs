@@ -12,8 +12,8 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
 
     DatabaseHelper myDb;
-    EditText editName,editSurname,editMarks,editID;
-    Button addButton,viewButton,updateButton;
+    EditText editName,editSurname,editMarks,editID,deleteID;
+    Button addButton,viewButton,updateButton,deleteButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,16 +23,33 @@ public class MainActivity extends AppCompatActivity {
 
         editName = (EditText)findViewById(R.id.editText2);
         editID = (EditText)findViewById(R.id.editTextID);
+        deleteID = (EditText)findViewById(R.id.deleteID);
         editSurname = (EditText)findViewById(R.id.editText3);
         editMarks = (EditText)findViewById(R.id.editText5);
         addButton = (Button)findViewById(R.id.button);
         viewButton = (Button)findViewById(R.id.button2);
         viewButton = (Button)findViewById(R.id.button2);
         updateButton = (Button)findViewById(R.id.button3);
+        deleteButton = (Button)findViewById(R.id.button4);
         AddData();
         ViewAllData();
         UpdateData();
+        DeleteData();
     }
+
+    private void DeleteData() {
+        deleteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Integer deletedRows = myDb.deleteData(deleteID.getText().toString());
+                if(deletedRows >0)
+                    Toast.makeText(MainActivity.this,"Deletion Successfully",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(MainActivity.this,"Failed to delete",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+
 
     public void UpdateData() {
         updateButton.setOnClickListener(new View.OnClickListener() {

@@ -31,7 +31,7 @@
                 android:layout_width="70dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="0"
-                android:text="NAME :   " />
+                android:text="NAME    " />
 
             <EditText
                 android:id="@+id/editText2"
@@ -41,7 +41,7 @@
                 android:layout_weight="0"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="" />
+                android:hint="Enter the Name"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -63,7 +63,7 @@
                 android:layout_weight="0"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="" />
+                android:hint="Enter the surname"/>
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -85,7 +85,8 @@
                 android:layout_weight="0"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:padding="10dp" />
+                android:padding="10dp"
+                android:hint="Enter the Marks"/>
         </LinearLayout>
 
         <Button
@@ -99,19 +100,35 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="DISPLAY ALL" />
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal">
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
         <Button
             android:id="@+id/button3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="UPDATE" />
-    <EditText
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/editTextID"
+            android:hint="Enter the ID to update"/>
+    </LinearLayout>
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editTextID"/>
-</LinearLayout>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DELETE" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/deleteID"
+            android:hint="Enter the ID to Delete"/>
+    </LinearLayout>
     </LinearLayout>
 </android.support.constraint.ConstraintLayout>
