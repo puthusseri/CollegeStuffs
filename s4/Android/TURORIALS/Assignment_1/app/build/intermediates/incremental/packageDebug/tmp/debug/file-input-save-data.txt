@@ -1,0 +1,11 @@
+#Internal package file, do not edit.
+#Mon Apr 08 14:21:58 IST 2019
+1.base=/var/nfs/.home/mca2017/mca1759/CollegeStuffs/s4/Android/TURORIALS/Assignment_1/app/build/intermediates/dex/debug/mergeExtDexDebug/out
+0.baseType=DIRECTORY
+1.baseType=DIRECTORY
+count=2
+1.set=DEX
+0.path=classes.dex
+0.set=DEX
+0.base=/var/nfs/.home/mca2017/mca1759/CollegeStuffs/s4/Android/TURORIALS/Assignment_1/app/build/intermediates/dex/debug/mergeProjectDexDebug/out
+1.path=classes.dex

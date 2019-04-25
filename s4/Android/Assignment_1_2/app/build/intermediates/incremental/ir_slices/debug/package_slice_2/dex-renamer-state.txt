@@ -1,0 +1,4 @@
+#Wed Apr 10 13:09:08 IST 2019
+base.0=/var/nfs/.home/mca2017/mca1759/CollegeStuffs/s4/Android/Assignment_1_2/app/build/intermediates/transforms/dexMerger/debug/2
+path.0=classes.dex
+renamed.0=classes.dex
