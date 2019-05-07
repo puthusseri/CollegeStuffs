@@ -1,23 +1,32 @@
 package com.example.dbeg;
 
 import android.content.Intent;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     Button insert,delete,update,view,viewAll,navigation;
     EditText name,password,id;
+    DatabaseHelper mydb = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         navigation = (Button)findViewById(R.id.button6);
+        name = (EditText)findViewById(R.id.editText);
+        password = (EditText)findViewById(R.id.editText2);
+        id = (EditText) findViewById(R.id.textView);
+
         navigation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -26,7 +35,74 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        insert = (Button)findViewById(R.id.button);
+        update = (Button)findViewById(R.id.button2);
+        delete = (Button)findViewById(R.id.button3);
+        view = (Button)findViewById(R.id.button4);
+        viewAll = (Button)findViewById(R.id.button5);
+        insert.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                boolean result = mydb.insertData(name.getText().toString(),password.getText().toString());
+                if (result == true)
+                    Toast.makeText(getApplicationContext(),"Insertion ok",Toast.LENGTH_LONG).show();
+                else
+                    Toast.makeText(getApplicationContext(),"NOT INSERTED",Toast.LENGTH_SHORT).show();
+            }
+        });
+        update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                mydb.updateData(id.getText().toString(),name.getText().toString(),password.getText().toString());
+            }
+        });
+        viewAll.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor result = mydb.viewAll();
+                if(result.getCount() == 0) {
+                    showMessage("Error ","No data found");
+                }
+                else{
+                    StringBuffer stringBuffer = new StringBuffer();
+                    while(result.moveToNext()){
+                        stringBuffer.append("\n\nID : "+result.getString(0));
+                        stringBuffer.append("\nUSERNAME : "+result.getString(1));
+                        stringBuffer.append("\nPASSWORD : "+result.getString(2));
+                    }
+                    showMessage("DATA",stringBuffer.toString());
+
+                }
+            }
+        });
+
+        view.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Cursor result = mydb.viewData(id.getText().toString());
+                if(result.getCount() == 0) {
+                    showMessage("Error ","No data found");
+                }
+                else{
+                    StringBuffer stringBuffer = new StringBuffer();
+                    while(result.moveToNext()){
+                        stringBuffer.append("\n\nID : "+result.getString(0));
+                        stringBuffer.append("\nUSERNAME : "+result.getString(1));
+                        stringBuffer.append("\nPASSWORD : "+result.getString(2));
+                    }
+                    showMessage("DATA",stringBuffer.toString());
+
+                }
+            }
+        });
 
 
+    }
+    public  void showMessage(String title,String message) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(this)
+                .setTitle(title)
+                .setMessage(message)
+                .setCancelable(true);
+        builder.show();
     }
 }
