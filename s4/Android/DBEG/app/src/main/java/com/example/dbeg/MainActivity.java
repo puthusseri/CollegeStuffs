@@ -14,7 +14,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button insert,delete,update,view,viewAll,navigation;
+    Button insert,delete,update,view,viewAll,navigation,alarm;
     EditText name,password,id;
     DatabaseHelper mydb = new DatabaseHelper(this);
 
@@ -40,6 +40,8 @@ public class MainActivity extends AppCompatActivity {
         delete = (Button)findViewById(R.id.button3);
         view = (Button)findViewById(R.id.button4);
         viewAll = (Button)findViewById(R.id.button5);
+
+        alarm = (Button)findViewById(R.id.button6);
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -93,6 +95,15 @@ public class MainActivity extends AppCompatActivity {
                     showMessage("DATA",stringBuffer.toString());
 
                 }
+            }
+        });
+        delete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int result = mydb.deleteData(id.getText().toString());
+                if(result>0)
+                    Toast.makeText(getApplicationContext(),"Updated",Toast.LENGTH_SHORT).show();
+
             }
         });
 

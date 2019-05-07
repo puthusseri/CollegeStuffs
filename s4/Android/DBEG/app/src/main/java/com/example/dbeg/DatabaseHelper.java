@@ -58,6 +58,17 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         int result = db.update(TABLE_NAME,contentValues,"ID=?",new String[] {id});
 
     }
+    public int deleteData(String id) {
+
+        SQLiteDatabase db = this.getWritableDatabase();
+
+       int i =  db.delete(TABLE_NAME,"ID=?",new String[] {id});
+       return i;
+
+
+    }
+
+
     public Cursor viewAll() {
         SQLiteDatabase db = this.getWritableDatabase();
         String sql = "SELECT * FROM "+TABLE_NAME;
