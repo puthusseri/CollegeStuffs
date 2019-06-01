@@ -1,0 +1,262 @@
+<html>
+	<head>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel = "stylesheet" href = social.css>
+		<script src = "script.js"></script>
+		<title>Registration Form</title>
+	</head>
+	<body>
+		<div class = header>
+			<!--<img src = logo.png id = logo>
+			<div class = heading left>
+				<label id = label1>The Institute of Chartered Accountants of India</label>
+				<br>
+				<label id = label2>(Setup by Act of Parliment)</label>  
+			</div>
+			-->
+			
+			<table>
+			<tr>
+				<td rowspan = 3><img src = icai.png></td>
+				<td>Search <input type = text></td>
+				<td>
+					<table>
+						<tr><td width = 200px><label>Follow Us</label></td></tr>
+						<tr><td>
+							<img src = f.png>
+							<img src = y.png>
+							<img src = t.png>
+							<img src = g.png>
+							<img src = l.png>
+						    </td>
+						</tr>
+					</table>
+				</td>
+				<tr><td><hr></td></tr>
+				<tr><td>
+					<div id = rightpartbottom>
+						<label>Home | </label>
+						<label>e-Services</label>
+						<label>e-Sahaayathaa</label>
+						<label>Feedback</label>
+						<label>Contact Us</label>
+						<label>Web Mail</label>
+					</div>	
+				</td></tr>
+			</tr>
+			
+			
+			</table>
+			<!--	
+			<div class = righttparttop>
+				<label>Search</label><input type = text>
+				<label>Follow Us</label>
+				
+				
+
+				<img src = fb-icon.png height = 50px width = 50px class = social>
+				<img src = Youtube-icon.png height = 50px width = 50px class = social>
+				<img src = twitter.png height = 50px width = 50px class = social>
+				<img src = google.png height = 50px width = 50px class = social>
+				
+			</div> 
+			<div id = rightpartbottom>
+				<label>Home</label>
+				<label>e-Services</label>
+				<label>e-Sahaayathaa</label>
+				<label>Feedback</label>
+				<label>Contact Us</label>
+				<label>Web Mail</label>
+				
+			</div>
+			-->
+			
+			<div class = headerbuttons>
+				<label>Overview</label>
+				<label>Departments</label>
+				<label>Members</label>
+				<label>Students</label>
+				<label>Industry</label>
+				<label>Resources</label>
+				<label>Showcase</label>
+				<label>Other Imp.Links</label>
+				<label>FAQs</label>
+				<img src = cc.png>
+			</div>				
+		</div>
+			
+			<div>
+			<center><u>			
+			<h3>Application Form For Registration to Common Proficency Test Course</h3></u>
+			</center>
+				<form name = appform>
+					<table id = form-table width = 100% border = 1>
+						<tr>
+							<td colspan = 4>1.Name in full(As per SSC x certificates)</td>
+						</tr>
+						<tr>
+							<td>First Name</td><td><input type = text name =fname width = 500px pattern = "[a-zA-Z][a-zA-Z]{2,}"></td>
+						</tr>
+						<tr>
+							<td>Middle Name</td><td><input type = text name =mname ></td>
+						</tr>
+						<tr>
+							<td>Last Name</td><td><input type = text name =lname pattern = "[a-zA-Z][a-zA-Z]{2,}"></td>
+						</tr>
+						<tr>
+							<td>2.Sex</td>
+								<td><input type = radio name = sex value = male id = male>
+								<label for = male>Male</label> 
+								<input type = radio name = sex value = female id = female>
+								<label for = female>Female</label>
+								</td>
+						</tr>
+						<tr>
+							<td>3.Date of Birth</td>
+							<td><input type = date name = dob ></td>
+						
+						</tr>
+						<tr>
+							<td>4.(a)Mothers Name</td>
+							<td><input type  = text name = mothersname></td>
+						</tr>
+						<tr>
+							<td>4.(b)Fathers Name</td>
+							<td><input type  = text name = fathersname></td>
+						</tr>
+						<tr>
+							<td>5.(a)Address for Communications </td>
+						</tr>
+				
+						<tr>
+							<td>Address Line 1</td>
+							<td><input type  = text name = address1></td>
+						</tr>
+						<tr>
+							<td>Address Line 2</td>
+							<td><input type  = text name = address2></td>
+						</tr>
+						<tr>
+							<td>Address Line 3</td>
+							<td><input type  = text name = address3></td>
+						</tr>
+						<tr>
+							<td>Address Line 4</td>
+							<td><input type  = text name = address4></td>
+						</tr>
+						<tr>
+							<td>City</td>
+							<td><select name = city>
+								<option value = Trivandrum>Trivandrum</option>
+								<option value = Kolkatta>Kolkatta</option>
+								<option value = Kannur>Kannur</option>
+								<option value = Calicut>Calicut</option>
+								<option value = Chennai>Chennai</option>
+								<option value = Mumbai>Mumbai</option>
+								<option value = Goa>Goa</option>
+							</select></td>
+							<td>State Code</td>
+							<td><select name = state_code>
+								<option value = 1>Kerala(1)</option>
+								<option value = 2>Tamil Nadu(2)</option>
+								<option value = 3>Goa(3)</option>
+								<option value = 4>Maharashtra(4)</option>
+								<option value = 5>West Bengal(5)</option>
+							</select></td>
+					
+						</tr>
+						<tr>
+							<td>Pincode</td>
+							<td><input type  = text name = pincode></td>
+							<td>Phone Number with stdcode</td>
+							<td><input type  = text name = phone></td>
+						</tr>
+						<tr>
+							<td>Country</td>
+							<td><select name = country>
+								<option value = India>India</option>
+								<option value = Australia>Australia</option>
+								<option value = Germany>Germany</option>
+								<option value = China>China</option>
+							</select></td>
+						</tr>
+						<tr>
+							<td>Email id</td>
+							<td><input type  = text name = email></td>
+							<td>Mobile Number</td>
+							<td><input type  = text name = mobile></td>
+						</tr>
+						<tr>
+							<td>5.(b).Permanent Address same as communucation address given in 5(a) above:</td>
+							<td>
+								<input type = radio value = yes name = sameaddress id =trueaddress onClick =changefunctionyes1()>
+								<label for = trueaddress>Yes</label>
+								<input type = radio value = no name = sameaddress id =falseaddress onClick =changefunctionno()>
+								<label for = falseaddress>No</label>
+							</td>
+						</tr>
+				
+						<tr>
+							<td>Address Line 1</td>
+							<td><input type  = text name = permanentaddress1></td>
+						</tr>
+						<tr>
+							<td>Address Line 2</td>
+							<td><input type  = text name = permanentaddress2></td>
+						</tr>
+						<tr>
+							<td>Address Line 3</td>
+							<td><input type  = text name = permanentaddress3></td>
+						</tr>
+						<tr>
+							<td>Address Line 4</td>
+							<td><input type  = text name = permanentaddress4></td>
+						</tr>
+						
+						<tr>
+							<td>City</td>
+							<td><select name = city1>
+								<option value = Trivandrum>Trivandrum</option>
+								<option value = Kolkatta>Kolkatta</option>
+								<option value = Kannur>Kannur</option>
+								<option value = Calicut>Calicut</option>
+								<option value = Chennai>Chennai</option>
+								<option value = Mumbai>Mumbai</option>
+								<option value = Goa>Goa</option>
+							</select></td>
+							<td>State Code</td>
+							<td><select name = state_code1>
+								<option value = 1>Kerala(1)</option>
+								<option value = 2>Tamil Nadu(2)</option>
+								<option value = 3>Goa(3)</option>
+								<option value = 4>Maharashtra(4)</option>
+								<option value = 5>West Bengal(5)</option>
+							</select></td>
+					
+						</tr>
+						<tr>
+							<td>Pincode</td>
+							<td><input type  = text name = pincode1></td>
+							<td>Phone Number with stdcode</td>
+							<td><input type  = text name = phone1></td>
+						</tr>
+						<tr>
+							<td>Country</td>
+							<td><select name = country1>
+								<option value = India>India</option>
+								<option value = Australia>Australia</option>
+								<option value = Germany>Germany</option>
+								<option value = China>China</option>
+							</select></td>
+						</tr>		
+					</table>
+					<center>
+					<input type = button name = submit value = Submit onclick = validate()>
+					<button type = reset name = reset value = reset>Reset</button>
+					</center>	  	
+				
+		</form>
+		</div>
+	</body>
+</html>
+

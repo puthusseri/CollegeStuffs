@@ -1,0 +1,82 @@
+<! html5>
+<html>
+	<head> 
+		<title>
+			Bank
+		</title>
+		<style>
+			label {
+				 display: inline-block;
+				 width:100px;
+				 text-align: center;
+			}
+		</style>
+	
+	</head>
+	<body>
+		<form name = "login" action = "" method = "get">
+		
+			<center> <h1> Application For Account Opening </h1> </center>
+			<table border = 1 align = "center" width = "400" cellpadding = 10 cellspacing = 1>
+				<tr>
+					<td> <label for="First_Name" >First Name </label> </td>
+					<td> <input type = "text" name = "First_Name" placeholder = "Enter your First Name">	 <br> </td>
+				</tr>
+					
+				<tr>
+					<td> <label for="Last_Name">Last Name </label>    </td>
+					<td> <input type = "text" name = "Last_Name" placeholder = "Enter your Last Name">	 <br> </td>
+				</tr>
+				
+				<tr>
+					<td> <label for="Mobile" >Mobile </label> </td>
+					<td> <input type = "text" name = "Mobile" placeholder = "Enter your Mobile Number" maxlength = 10 minlength = 10>	 <br> </td>
+				</tr>
+				
+				<tr>
+					<td><label for="Address">Address </label>          </td>
+					<td><textarea name = "Address" rows = 4 cols = 40></textarea><br> 						</td>
+				</tr>
+					
+				<tr>
+					<td> <label>Account Type </label>    </td>
+					<td> <select >
+						<option>Savings</option>
+						<option>Current</option>  </td>
+					     </select>
+				</tr>
+				
+				<tr>
+					<td> <label> Gender </label>    </td>
+					<fieldset id = "gender">
+					<td> <label>Male   </label> 
+					     <input type = "radio" name = "gender" value = "Male"> 
+				
+					     <label>Female </label>   
+					     <input type = "radio" name = "gender" value = "Female"> 
+					</fieldset>
+				</tr> 
+				
+				
+				
+				 
+				<tr>
+					<td> <label> Vehicles </label>    </td>
+					<td> <label for = "car">Car </label><input type = "checkbox" id = "car" value = "car"> <br>
+					     <label for = "bike">Bike </label><input type = "checkbox" id = "bike" value = "bike"><br>
+					     <label for = "bus">Bus </label><input type = "checkbox" id = "bus" value = "bus"><br>
+					     <label for = "train">Train </label><input type = "checkbox" id = "train" value = "train">
+					
+					</td>
+				</tr> 
+				<tr>
+					<td colspan = 3> <center><input type = "submit" name = "submit"  value = "Submit" ></center><td>
+				</tr>
+			</table>
+			
+		</form>
+		
+	</body>
+	
+</html>
+

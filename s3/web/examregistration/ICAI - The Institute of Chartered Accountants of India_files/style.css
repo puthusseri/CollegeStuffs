@@ -1,0 +1,664 @@
+@charset "utf-8";body{font-family:Trebuchet MS,Arial,Helvetica,sans-serif;font-size:14px;margin:0;padding:0;background:transparent url(https://www.icai.org/img/back.gif);}
+form{margin:0;padding:0;}
+a:hover{text-decoration:underline;}
+#top_link{font-size:12px;color:#033476;}
+#top_link a{font-size:12px;color:#033476;text-decoration:none;padding:5px;}
+#top_link a:hover{color:#033476;text-decoration:underline;}
+#left_links a{font-size:12px;color:#033476;text-decoration:none;}
+#left_links a:hover{color:#033476;text-decoration:underline;}
+#more_link ul{margin:0;padding:0 0 0 20px;}
+#more_link li{list-style:disc;padding:4px 0 4px 0;}
+#more_link li a{font-size:12px;color:#033476;text-decoration:none;}
+#more_link li a:hover{font-size:12px;color:#033476;text-decoration:underline;}
+#bottom{font-size:11px;line-height:22px;}
+#bottom span{font-size:11px;line-height:22px;color:#8b8f92;}
+a{font-size:12px;color:#033476;text-decoration:none;}
+a:hover{color:#033476;text-decoration:underline;}
+.posttitle{font-size:20px;color:#ffa500;}
+.categorytitle{font-size:20px;color:#c875ff;}
+.breadcrumbs{font-size:16px;color:#000;}
+.breadcrumbs a{font-size:16px;color:#789f00;}
+.breadcrumbs a:hover{font-size:16px;color:#789f00;}
+.posting img{border:0 solid #c0c0c0;}
+.posting li{list-style-type:none;list-style-image:none;padding-left:15px;padding-right:5px;padding-top:0;padding-bottom:0;background:transparent url(https://www.icai.org/img/bullet.gif) no-repeat 0 .35em;}
+hr{color:#c0c0c0;height:1px;}
+.liclass a{font-size:15px;}
+.liclass a:hover{font-size:15px;}
+.border{border-left:1px solid #8dc0e3;border-right:1px solid #8dc0e3;}
+.top_nav{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif,;font-size:14px;color:#fff;}
+.top_nav a{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif,;font-size:14px;color:#fff;text-decoration:none;padding:5px;}
+.top_nav a:hover{font-family:"Trebuchet MS",Arial,Helvetica,sans-serif,;color:#000;text-decoration:none;}
+input{font-size:14px;border:1px solid #cbcbcc;}
+a.url{color:green;}
+a.url:hover{color:green;}
+a.big{font-size:15px;color:#033476;text-decoration:none;}
+a.big:hover{font-size:15px;color:#033476;text-decoration:none;}
+.simple{font-size:12px;text-decoration:none;}
+/*!!Epoch Prime AJAX JavaScript Calendar CSS style file(c) 2006 MeanFreePath https://www.meanfreepath.com All rights reserved. You can easily strip out all comments and unnecessary whitespace from this file - visit https://www.meanfreepath.com/tools/jscompactor.html to use our free JavaScript/CSS code compactor.!!*/ table.calendar{font-family:Helvetica,Arial,sans-serif;font-size:.8em;border-collapse:collapse;background-color:white;border:solid #999 1px;background-color:white;width:215px;text-align:center;-moz-user-select:none;}
+table.calendar input,table.calendar select{font-size:10px;}
+table.calendar td,table.calendar th{border:0;font-size:10px;text-align:center;}
+div.mainheading{margin:2px;}
+table.cells{border-collapse:collapse;border:solid #ccc 1px;cursor:pointer;empty-cells:show;margin:0 6px 0 6px;}
+table.cells th{border:solid #ccc 1px;text-align:left;font-weight:bold;color:#0054e3;width:22px;}
+table.cells th.wkhead{border-right:double #ccc 3px;cursor:default;width:22px;}
+table.cells td{border:solid #ccc 1px;vertical-align:top;text-align:left;font-weight:bold;height:20px;}
+table.cells td.wkhead{background-color:white;text-align:center;border-right:double #ccc 3px;color:#0054e3;}
+table.cells td.noselect{background-color:#eee;color:#bbb;text-decoration:line-through;cursor:default;}
+table.cells td.hlday{background-color:#9f9;}
+table.cells td.wkday{background-color:#ddd;}
+table.cells td.wkend{background-color:#ddd;}
+table.cells td.cell_selected{background-color:#9cf;color:black;}
+table.cells td.notmnth{background-color:#fff;color:#ccc;}
+table.cells td.notallowed{background-color:white;color:#eee;font-style:italic;}
+table.cells td.hover{background-color:#999;}
+table.cells td div{padding:1px;margin:0;}
+/* mlface.css */
+.mlddm{margin:0;padding:0;backgroundImage:url('../img/top_nav_bg.jpg');height:24px;list-style:none;z-index:50;position:relative;}
+.mlddm li{display:inline;margin:0;padding:0;list-style:none;float:left;font:bold 11px trebuchet ms,georgia;border-right:1px solid #FFF;}
+.mlddm li a,.mlddm li a#buttonnohover{display:block;text-align:center;white-space:nowrap;backgroundImage:url('https://www.icai.org/img/top_nav_bg.jpg');border:0 solid #515560;padding:3px 0;margin:0;color:#033476;width:90px;text-decoration:none;}
+.mlddm li a:hover,.mlddm li a#buttonhover{background:#0eb8ff;color:#FFF;}
+.mlddm ul{margin:1px 0 0 0;padding:0;visibility:hidden;position:absolute;clear:both;background:#e7d7a4;border-left:4px solid #0eb8ff;shadow(color=#C6C6C6,direction=135,strength=2);}
+.mlddm ul li{float:none;margin:0;padding:0;border-width:0;}
+.mlddm ul li a{white-space:nowrap;width:auto;margin:0;padding:1px 20px 4px 2px;font:12px trebuchet ms,georgia;text-align:left;text-decoration:none;border:0 solid black;background:#e1f5ff;color:#033476;}
+.mlddm ul li a:hover{color:#FFF;backgroundImage:url('https://www.icai.org/img/top_nav_bg.jpg');}
+.mlddm .hsub{background:#33537b no-repeat right url(arrowa.gif);}
+.mlddm .hsub:hover{backgroundImage:url('https://www.icai.org/img/top_nav_bg.jpg') no-repeat right url(arrowa.gif);}
+/* SpryTable css */
+@charset "UTF-8";.TabbedPanels{margin:0;padding:0;float:left;clear:none;background:url(https://www.icai.org/img/inner_bg.gif);width:100%;}
+.TabbedPanelsTabGroup{margin:0;padding:0;}
+.TabbedPanelsTab{position:relative;top:1px;float:left;padding:4px 10px;margin:0 1px 0 0;font:bold .7em sans-serif;list-style:none;border-left:solid 1px #a8cae1;border-top:solid 1px #a8cae1;border-right:solid 1px #a8cae1;-moz-user-select:none;-khtml-user-select:none;cursor:pointer;font-size:12px;color:#033476;}
+.TabbedPanelsTabSelected{background:url(../img/rever.gif);}
+.TabbedPanelsTab a{color:#033476;text-decoration:none;z-index:-1;}
+.TabbedPanelsContentGroup{clear:both;border-left:solid 1px #a8cae1;border-bottom:solid 1px #a8cae1;border-top:solid 1px #a8cae1;border-right:solid 1px #a8cae1;background-color:#fff;}
+.TabbedPanelsContent{font-family:"Trebuchet MS";padding:5px;text-align:justify;line-height:20px;font-size:14px;color:#333;}
+.TabbedPanelsContent h1{font-size:18px;margin-bottom:0;margin-top:0;}
+.VTabbedPanels .TabbedPanelsTabGroup{float:left;width:10em;height:20em;background-color:#EEE;position:relative;border-top:solid 1px #999;border-right:solid 1px #999;border-left:solid 1px #CCC;border-bottom:solid 1px #CCC;}
+.VTabbedPanels .TabbedPanelsTab{float:none;margin:0;border-top:none;border-left:none;border-right:none;}
+.VTabbedPanels .TabbedPanelsTabSelected{background-color:#EEE;border-bottom:solid 1px #999;}
+.VTabbedPanels .TabbedPanelsContentGroup{clear:none;float:left;padding:0;width:30em;height:20em;}
+#whatsnewimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#whatsnewimg img{left: -20px;top: 0px;position: absolute;}
+#homeeventsimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#homeeventsimg img{left: -58px;top: 0px;position: absolute;}
+#homereventsimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#homereventsimg img{left: -1px;top: -19px;position: absolute;}
+#homeceventsimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#homeceventsimg img{left: -21px;top: -19px;position: absolute;}
+#elearningimg{width: 62px;height: 60px;overflow: hidden;display: block;position: relative;float: left;}
+#elearningimg img{left: -3px;top: -39px;position: absolute;}
+#announcementsimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#announcementsimg img{left: -77px;top: -1px;position: absolute;}
+#knowyourinstituteimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#knowyourinstituteimg img{left: -59px;top: -19px;position: absolute;}
+#mostimportantimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#mostimportantimg img{left: -38px;top: -0px;position: absolute;}
+#icaiinnewsimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#icaiinnewsimg img{left: -94px;top: 0px;position: absolute;}
+#notificationsimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#notificationsimg img{left: -39px;top: -19px;position: absolute;}
+#searchimg{width: 16px;height: 16px;overflow: hidden;display: block;position: relative;float: left;}
+#searchimg img{left: 0px;top: 0px;position: absolute;}
+#icailogoimg{width: 547px;height: 66px;overflow: hidden;display: block;position: relative;float: left;}
+#icailogoimg img{left: -2px;top: -119px;position: absolute;}
+#blacksquare{width: 5px;height: 10px;overflow: hidden;display: block;position: relative;float: left;margin-right: 5px;margin-left: 5px;}
+#blacksquare img{left: -12px;top: -99px;position: absolute;}
+#secondarylinksimg{width: 5px;height: 10px;overflow: hidden;display: block;position: relative;float: left;}
+#secondarylinksimg img{left: -2px;top: -100px;position: absolute;}
+
+body {  
+	margin-top: 0;
+	margin-bottom: 0;
+	margin-left: 0;
+	margin-right: 0;
+/*	background-image:url(../imgs/bg.gif);
+	background-repeat:repeat-x; */
+	}
+
+
+table, P	{
+	font-family: Arial, Helvetica, sans-serif; 
+	color: #333333;
+	line-height: 17px;
+	letter-spacing: 0em;
+	font-size: 12px		
+	}
+
+.shade_content {
+	background-image:url(https://www.icai.org/imgs/shade_content.gif);
+	background-repeat:repeat-x;
+	background-position: top center;
+	}
+
+
+.Heading_Inner {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	COLOR: #010162;
+	font-weight: bold;
+/*	border-bottom: 1px dotted #CCCCCC;
+	text-indent: 3px;
+	padding-left:20px;	*/
+ 	height: 26px;
+	vertical-align:top;
+	letter-spacing: 0em;
+	}
+	
+.Heading_Gap {
+ 	height: 20px;
+	}
+
+.Divide_Content {
+	width:30px;
+/*	background-image: url(../imgs/dots.gif);
+	background-repeat:repeat-y;
+	background-position:center; */
+	}
+
+#Content_Table {
+	width:98%;
+	}
+
+
+	
+.Copyright {
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 11px;
+	color: #333333;
+	line-height: 15px;
+	letter-spacing: 0.03em;
+	}
+
+
+.ReadMore {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0066cc;
+	font-weight: normal;
+	text-decoration: none;
+	}
+
+a.ReadMore:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	font-weight: normal;
+	text-decoration: underline;
+	}
+
+
+.name {
+	color: #0066CC;
+	font-weight: bold
+	}
+	
+.More {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #0066cc;
+	font-weight: bold;
+	text-decoration: none;
+	}
+
+a.More:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #333333;
+	font-weight: bold;
+	text-decoration: underline;
+	}
+	
+	
+.LinksBottom {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CC0000;
+	font-weight: none;
+	text-decoration: none;
+	letter-spacing:0em;
+	}
+
+a.LinksBottom:hover {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	color: #CC0000;
+	font-weight: none;
+	text-decoration: underline;
+	letter-spacing:0em;
+	}
+
+a	{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px;
+	line-height: 14px; 
+	font-weight: none;
+	color: #01619B;
+	letter-spacing: 0.03em; 
+	text-decoration: none
+	}
+
+
+a:hover	{
+	font-family: Arial, Helvetica, sans-serif; 
+	font-size: 12px; 
+	font-weight: none;
+	color: #333333; 
+	letter-spacing: 0.03em;
+	text-decoration: none
+	}
+
+
+.HeadingRed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	COLOR: #CC0000;
+	font-weight:bold;
+	}
+.HeadingBlue a{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	COLOR: #CC0000;
+	font-weight:bold;
+	}
+.TextRed {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	COLOR: #CC0000;
+	font-weight:normal;
+	}
+
+.HeadingBottom2 {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 14px;
+	COLOR: #333333;
+	font-weight:bold;
+	}
+		
+.textarea	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-color: #999999;
+	letter-spacing: 0.03em;
+	border:1px solid #999999;
+	background-color: #FFFFFF;
+    width: 130px;
+	height: 14px;
+	}
+	
+.textarea1	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-color: #999999;
+	letter-spacing: 0.03em;
+	border:1px solid #999999;
+	background-color: #FFFFFF;
+    width: 125px;
+	height: 20px;
+	}
+
+.button {
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	color: #000000;
+	width: 50px;
+	height: 20px;
+	letter-spacing: 0.04em;
+	filter:progid:DXImageTransform.Microsoft.Gradient
+	(GradientType=0, StartColorStr='#E5E5E5',EndColorStr='#FFFFFF');
+	/*padding: 0px 2px 2px 4px;*/
+	background-color: #F5F5F5;
+	margin-right: 3px;
+	border-left: #FFFFFF 1px solid;
+	border-top: #FFFFFF 1px solid;
+	border-right: #666666 1px solid;
+	border-bottom: #666666 1px solid;
+	}
+	
+.SearchArea	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-color: #999999;
+	letter-spacing: 0.03em;
+	border:1px solid #999999;
+	background-color: #FFFFFF;
+    	width: 220px;
+	height: 24px;
+	margin: 3px;
+/*	background-image:url(../imgs/icon_search.gif);
+	background-repeat:no-repeat;
+	padding-left:20px;*/
+	}
+
+.BranchesArea	{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	font-color: #999999;
+	letter-spacing: 0.03em;
+	border:1px solid #999999;
+	background-color: #FFFFFF;
+    width: 125px;
+	height: 20px;
+/*	background-image:url(../imgs/icon_search.gif);
+	background-repeat:no-repeat;
+	padding-left:20px;*/
+	}
+	
+	
+.toplinks {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	}
+
+.toplinks:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	text-decoration:underline;
+	}
+	
+
+
+.links2 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	letter-spacing:0em;
+	}
+
+.links2:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0066CC;
+	font-weight:normal;
+	text-decoration:underline;
+	letter-spacing:0em;
+	}	
+	
+	
+	
+.Links1 {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0066CC;
+	font-weight:normal;
+	letter-spacing:0em;
+	}
+
+.Links1:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	text-decoration:underline;
+	letter-spacing:0em;
+	}
+	
+.underline	{
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:underline;
+	}
+
+.underline_bold	{
+	font-family:Arial, Helvetica, sans-serif;
+	text-decoration:underline;
+	font-weight:bold;
+	}
+	
+.members_font_big	{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:underline;
+	}
+	
+.font_big	{
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	font-weight:bold;
+	text-decoration:none;
+	}	
+
+.members_Links_big {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#333333;
+	font-weight:bold;
+	letter-spacing:0em;
+	}
+
+
+.members_Links_big:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	color:#0066CC;
+	font-weight:bold;
+	text-decoration:underline;
+	letter-spacing:0em;
+	}	
+	
+.members_Links_small {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	letter-spacing:0em;
+	}
+
+.members_Links_small:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0066CC;
+	font-weight:normal;
+	text-decoration:underline;
+	letter-spacing:0em;
+	}	
+	
+
+.question_highlight {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#0066CC;
+	font-weight:normal;
+	letter-spacing:0em;
+	}
+
+.question_highlight:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:normal;
+	text-decoration:underline;
+	letter-spacing:0em;
+	}	
+	
+  	
+.textarea	{
+	border-right:#CCCCCC 1xp ridge;
+	border-top:#CCCCCC 1px ridge;
+	border-left:#CCCCCC 1px ridge;
+	width:120px;
+	color:#000000;
+	height:15px;
+	background-color:#f5f5f5;
+	border-bottom:#CCCCCC 1px ridge;
+	border-color:#999999;
+	}
+
+.form_instructions {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#CC0000;
+	font-weight:bold;
+	letter-spacing:0em;
+	}
+
+.form_instructions:hover {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:12px;
+	color:#333333;
+	font-weight:bold;
+	text-decoration:underline;
+	letter-spacing:0em;
+	}		
+
+.note	{
+	font-family:Arial, Helvetica, sans-serif;
+	color:#CC0000;
+	font-weight:bold;
+	}	
+
+#home li.home a,
+#aboutus li.aboutus a,
+#joinus li.joinus a,
+#members li.members a,
+#students li.students a,
+#employers li.employers a,
+#resources li.resources a,
+#events li.events a,
+#pressroom li.pressroom a,
+#communities li.communities a,
+#partners li.partners a {
+	/*background-image:url(bg_over.gif);
+	background-repeat:no-repeat;
+	background-position:top center;
+	font-weight:bold;*/
+	}
+	
+ul#topnav li.home a {
+	/*background-image: url(../topnav/home.gif);
+	width: 52px;*/
+	}
+	
+ul#topnav li.aboutus a {
+	/*background-image: url(../topnav/aboutus.gif);
+	width: 69px;*/
+	}
+	
+ul#topnav li.joinus a {
+	/*background-image: url(../topnav/joinus.gif);
+	width: 61px;*/
+	}
+	
+ul#topnav li.members a {
+	/*background-image: url(../topnav/members.gif);
+	width: 70px;*/
+	}
+	
+ul#topnav li.students a {
+	/*background-image: url(../topnav/students.gif);
+	width: 67px;*/
+	}
+	
+ul#topnav li.employers a {
+	/*background-image: url(../topnav/employers.gif);
+	width: 77px;*/
+	}
+	
+ul#topnav li.resources a {
+	/*background-image: url(../topnav/resources.gif);
+	width: 79px;*/
+	}
+	
+ul#topnav li.events a {
+	/*background-image: url(../topnav/events.gif);
+	width: 55px;*/
+	}
+	
+ul#topnav li.pressroom a {
+	/*background-image: url(../topnav/pressroom.gif);
+	width: 88px;*/
+	}
+	
+ul#topnav li.communities a {
+	/*background-image: url(../topnav/communities.gif);
+	width: 93px;*/
+	}
+	
+ul#topnav li.partners a {
+	/*background-image: url(../topnav/partners.gif);
+	width: 65px;*/
+	}
+	
+
+.flexdropdownmenu, .flexdropdownmenu ul{ /*topmost and sub ULs, respectively*/
+font-family:Arial, Helvetica, sans-serif;
+font-size:12px;
+letter-spacing: 0em;
+margin: 0;
+padding: 0;
+position: absolute;
+left: 0;
+top: 0;
+list-style-type: none;
+/*background: white;
+border: 1px solid #006699;*/
+border-bottom-width: 0;
+visibility: hidden;
+display: none; /*collapse all sub menus to begin with*/
+
+/*
+box-shadow: 3px 3px 8px #818181; shadow for CSS3 capable browsers.
+-webkit-box-shadow: 3px 3px 8px #818181;
+-moz-box-shadow: 3px 3px 8px #818181; 
+*/
+
+}
+
+
+.flexdropdownmenu li{
+position: relative;
+top:0px;
+letter-spacing: 0em;
+}
+
+.flexdropdownmenu li a{
+display: block;
+width: 180px; /*width of menu (not including side paddings)*/
+color: #01619b;
+background: #eeeeee;
+border-bottom: 1px solid #FFFFFF;
+text-decoration: none;
+padding: 6px 8px;
+letter-spacing: 0em;
+}
+
+* html .flexdropdownmenu li{ /*IE6 CSS hack*/
+display: inline-block;
+width: 180px; /*width of menu (include side paddings of LI A*/
+}
+
+.flexdropdownmenu li a:hover, .flexdropdownmenu li.selected>a{
+background: #c12323;
+color: #FFFFFF;
+top:8px;
+}
+
+.rightarrowclass{
+position: absolute;
+top: 6px;
+right: 5px;
+}
+.error{
+	color:red;
+}
+
+ul.menu {list-style:none; margin:0; padding:0}
+ul.menu * {margin:0; padding:0;}
+ul.menu a {display:block; color:#01619b; text-decoration:none}
+ul.menu a:hover {display:block; color:#ffffff; text-decoration:none;}
+ul.menu li {position:relative; float:left; margin-right:10px;margin-left:10px;}
+ul.menu ul {position:absolute; top:33px;left:0; background:#eeeeee; display:none; opacity:0; list-style:none}
+ul.menu ul li {position:relative; /*border:1px solid #aaa; border-top:1px solid #ffffff;*/ border-bottom:1px solid #ffffff; width:200px; margin:0}
+ul.menu ul li a {display:block; padding:8px;padding-left: 5px;padding-right:5px; background-color:#eeeeee}
+ul.menu ul li a:hover {background-color:#c12323;}
+ul.menu ul ul {left:160px; top:-1px}
+ul.menu .menulink {border:0px; padding:10px 10px 7px; /*font-weight:bold; background:url(images/header.gif); width:134px*/}
+ul.menu .menulink:hover, ul.menu .menuhover { color:#333333; 
+	background-repeat:no-repeat;
+	background-position:top center;}
+ul.menu .sub {background:#eeeeee url(arrow.gif) 190px 8px no-repeat}
+ul.menu .topline {border-top:1px solid #ffffff}

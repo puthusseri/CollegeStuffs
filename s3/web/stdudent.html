@@ -1,0 +1,176 @@
+<html>
+	<head>
+		<title>Student Application Form</title>
+		<style>
+		body{
+			background-color:linen	;
+		}
+		h1{
+			color:green;
+			text-align:center;
+		}
+		label{
+			display:inline-block;
+			text-align:right;
+		}
+		form{
+			display:inline-block;
+		}
+		#club{
+			display:inline-block;
+		}
+		input{
+			display:block;
+			//width:150px;
+			//float:right;
+			padding-left:70px;
+		}
+		</style>
+	</head>
+	
+	<body>
+	<h1>Student Registration form</h1>
+		<form action = "./action.php" method = "get">
+			<fieldset>
+				<legend>Personal details</legend>
+				<table>
+					<tr><td>
+					<label>Name</label></td>
+					<td><input type = "text" name = "name" placeholder = "Enter your name"></td>
+				</tr>
+				</table>				
+				<div>
+					<label>Mobile Number</label>
+					<input type = "text" name = "number" placeholder = "Enter your number"> <br>
+				</div>
+				
+				<div>
+					<label>Address</label>
+					<textarea rows = "4" cols = "4"></textarea> <br>
+ 				</div>
+ 				
+ 				<div>
+			 		
+			 		Gender
+			 		<div style = "padding-left:70px">
+			 		<input type = "radio" name = "gender" value = "Male" id = "male">
+			 		<label for = "male">Male</label><br>
+			 		
+			 		<input type = "radio" name = "gender" value = "Female" id = "female"> 
+			 		<label for = "female">Female</label><br>
+			 		
+				 	<input type = "radio" name = "gender" value = "Others" id = "others">
+				 	<label for = "others">Others</label></div><br>
+			 	</div>
+			 	<div>
+					<label>DOB</label>
+					<input type = "date" name = "dob"> <br>
+				</div>
+				
+			 	
+			 </fieldset>
+			 <br>
+			 <fieldset>
+				<legend>Qualification</legend>
+				
+				<div id = "qualification_heading">
+				
+					<label>Board</label>
+					<label>Year</label>
+					<label>Grade</label>
+				</div>
+				
+				<div>
+					<label>Matriculation</label>
+					<select>
+						<option>State</option>
+						<option>CBSE</option>
+						<option>ICSE</option>
+						<option>Other</option>
+					</select>
+					<input type = "text" name = "matriculation_year">
+					<input type = "text" name = "matriculation_grade">
+				</div>
+				
+				<div>
+					<label>Plustwo</label>
+					<select>
+						<option>State</option>
+						<option>CBSE</option>
+						<option>ICSE</option>
+						<option>Other</option>
+					</select><input type = "text" name = "plustwo_year">
+					<input type = "text" name = "plustwo_grade">
+ 				</div>
+ 				
+ 				<div>
+			 		<label>Graduation</label>
+					<select>
+						<option>KTU</option>
+						<option>Kannur University</option>
+						<option>Calicut University</option>
+						<option>MG University</option>
+						<option>Kerala University</option>
+					</select><input type = "text" name = "graduation_year">
+					<input type = "text" name = "graduation_grade">
+			 	</div>		
+			 	<fieldset id = "club">
+			 		<legend>Clubs</legend>
+			 		NSS<input type = "checkbox" name = "clubs" value = "NSS"> 
+			 		NCC<input type = "checkbox" name = "clubs" value = "NCC"> <br>
+			 		ROBOTICS CLUB<input type = "checkbox" name = "clubs" value = "ROBOTICS CLUB"> 
+			 		ICE<input type = "checkbox" name = "clubs" value = "ICE"> <br>	 	
+			 	</fieldset>
+			 </fieldset>
+			 <br>
+			 <fieldset>
+			 	<legend>Accademic Details</legend>	
+				<label>Institution</label>
+				<input type = "text" name = "institution">
+				<table>
+					<tr>
+						<th>Subject</th>
+						<th>Grade</th>
+						<th>CGPA</th>
+					</tr>
+					<tr>
+						<td>Computer Science</td>
+						<td>A</td>
+						<td>9.8</td>
+					</tr>
+					<tr>
+						<td>Maths</td>
+						<td>A</td>
+						<td>9.9</td>
+					</tr>
+					<tr>
+						<td>Statistics</td>
+						<td>A</td>
+						<td>9.1</td>
+					</tr>
+					<tr>
+						<td>English</td>
+						<td>A</td>
+						<td>9.0</td>
+					</tr>
+					<tr>
+						<td>Malayalam</td>
+						<td>A</td>
+						<td>9.4</td>
+					</tr>
+					
+						
+				</table>
+			</fieldset>
+			<br>
+			<fieldset>
+				<legend>Decleration</legend>
+				<pre>I .................... do here by declare that all the details about myself that I supply to the University,
+or am asked to confirm, is accurate and complete, particularly in respect of my qualifications.
+			 	</pre>
+				
+			 <button type = "reset"> Reset </button>
+			 <button type = "submit"> Submit </button>
+		</form>
+	</body>
+</html>

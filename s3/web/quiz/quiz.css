@@ -1,0 +1,44 @@
+.rowcol
+{
+font-size:20px;
+color:black;
+}
+h1
+{
+color:green;
+font-weight:600;
+font-size: 30px;
+}
+body
+{
+  color:blue;
+  font-family: Times New Roman;
+}
+table tr td
+{
+  font-size: 20px;
+}
+
+#sub
+{
+    font-size:20px;
+  
+}
+
+label
+{
+color: red;
+}
+
+#marks
+{
+  top:50px;
+  left:70%;
+
+}
+#score
+{
+  top:50px;
+  left:70%;
+
+}
