@@ -3,6 +3,7 @@ package com.example.dbeg;
 import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
+import android.net.Uri;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +15,7 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button insert,delete,update,view,viewAll,navigation,alarm;
+    Button insert,delete,update,view,viewAll,navigation,sms,button9;
     EditText name,password,id;
     DatabaseHelper mydb = new DatabaseHelper(this);
 
@@ -23,13 +24,23 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         navigation = (Button)findViewById(R.id.button6);
+        button9 = (Button)findViewById(R.id.button9);
         name = (EditText)findViewById(R.id.editText);
         password = (EditText)findViewById(R.id.editText2);
         id = (EditText) findViewById(R.id.textView);
 
+        button9.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Button Works",Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(getApplicationContext(),Main2Activity.class);
+                startActivity(intent);
+            }
+        });
         navigation.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Working",Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(MainActivity.this,Main2Activity.class);
                 intent.putExtra("Message","Vyshak");
                 startActivity(intent);
@@ -41,7 +52,16 @@ public class MainActivity extends AppCompatActivity {
         view = (Button)findViewById(R.id.button4);
         viewAll = (Button)findViewById(R.id.button5);
 
-        alarm = (Button)findViewById(R.id.button6);
+        sms = (Button)findViewById(R.id.button6);
+        sms.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(Intent.ACTION_SEND, Uri.parse("smsto:123"));
+                startActivity(intent);
+
+            }
+        });
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
