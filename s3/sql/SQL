@@ -1,0 +1,234 @@
+                                          
+drop table Sales_order_details_59;
+drop table Sales_order_59;
+drop table Salesman_master_59;
+drop table Product_master_59;
+drop table Client_master_59;
+drop table Clientmaster_59;
+drop view client_details_59;
+drop table item_details_59;
+
+ALTER TABLE sales_order_59 drop constraint CostPrice0_59;
+ALTER TABLE product_master_59 drop constraint CostPrice_59;
+ALTER TABLE product_master_59 drop constraint Cost_Price1_59;
+ALTER TABLE product_master_59 drop constraint Cost_Price2_59;
+//Create Table
+
+create table item_orer_59(customer_name varchar(20),address varchar(20),item varchar(20),price number);
+
+
+create table Client_master_59(
+	Client_no varchar(20) primary key check(Client_no like 'C%'),
+	Name varchar(20) not null,
+	Address1 varchar(20),
+	Address2 varchar(20),
+	City varchar(20),
+	Pincode number,
+	State varchar(20),
+	Bal_due number
+	);
+	
+create table Product_master_59(
+	Product_no varchar(20) primary key check(Product_no like 'P%'),
+	Description varchar(20) not null,
+	Profit_percent number,
+	unit_measure varchar(20),
+	Qty_on_hand number,
+	Recorder_lvl number,
+	Sell_price number,
+	Cost_price number
+	);
+
+create table Salesman_master_59(
+	Salesman_no varchar(20) primary key check(Salesman_no like'S%'),
+	Salesman_name varchar(20) not null, 
+	Address1 varchar(20) not null, 
+	City varchar(20), 
+	Pincode number,
+	State varchar(20), 
+	Sal_amt number not null check(Sal_amt!=0),
+	Tgt_to_get number not null check(Tgt_to_get !=0),
+	Tgt_sales number not null,
+	Remarks varchar(20)
+	);
+
+
+create table Sales_order_59(
+	Order_no varchar(20) primary key check(Order_no like'O%'),
+	Order_date date,
+	Client_no varchar(20) references Client_master_59(Client_no),
+	Dely_addr varchar(20),
+	Salesman_no varchar(20), 
+	Dely_type char default('F') check(dely_type in ('P','F')),
+	Billed_yn char,
+	Dely_date date,
+	Order_status varchar(20) check(Order_status in('In Process','Cancelled','Fulfilled','Cancelled'))
+	);
+
+
+create table Sales_order_details_59(
+	Order_no varchar(20) references Sales_order_59(Order_no),
+	Product_no varchar(20) references Product_master_59(Product_no),
+	Qty_ordered number,
+	Qty_number number,
+	Product_rate number
+	);
+
+alter table client_master_59 rename to clientmaster_59;
+select * from clientmaster_59;
+
+
+alter table sales_order_59 add check(order_date<dely_date);
+alter table product_master_59 add constraint Cost_Price_check_59 check(cost_price>0);
+alter table product_master_59 add constraint Cost_Price1_59 check(cost_price<>NULL);
+alter table product_master_59 add constraint Cost_Price2_59 check(sell_price>0);	
+
+insert into clientmaster_59 values('C00001','Ivan Bayross','Wandon','Worli','Mumbai',450005,'Maharashtra',15000);
+insert into clientmaster_59 values('C00002','Vandana Saitwa','Don Street','Bandra','Madras',780001,'Tamil Nadu',0);
+insert into clientmaster_59 values('C00003','pramadajagust','Mandon','Dadar','Mumbai',450007,'Maharashtra',5000);
+insert into clientmaster_59 values('C00004','Basu navindgi','Jerome','Juhu','Mumbai',450009,'Maharashtra',0);
+insert into clientmaster_59 values('C00005','Ravisreedharan','Dadar','Dadra','Delhi',100003,'Delhi',2000);
+insert into clientmaster_59 values('C00006','Rukmini','Rourk','Bandra','Mumbai',450002,'Maharashtra',0);
+
+
+
+insert into Product_master_59 values('P00001','1.44 floppies',5,'piece',100,20,525,500);
+insert into Product_master_59 values('P03453','monitors',6,'piece',10,3,12000,11280);
+insert into Product_master_59 values('P45789','mouse',5,'piece',20,5,1050,1000);
+insert into Product_master_59 values('P44783','keyboards',5,'piece',100,20,3150,3050);
+insert into Product_master_59 values('P45123','cd drive',2,'piece',10,3,5250,5100);
+insert into Product_master_59 values('P35412','540 hdd',2.5,'piece',10,3,8400,8000);
+
+
+
+	insert into Salesman_master_59 values('S00001','Kiran','a/14','worli',450001,'bombay',3000,100,50,'good');
+	insert into Salesman_master_59 values('S00002','Maneesh','j-65','nariman',450001,'bombay',3000,200,100,'good');
+	insert into Salesman_master_59 values('S00003','Ravi','p-7','Bandra',400001,'bombay',3000,200,100,'good');
+	insert into Salesman_master_59 values('S00004','Ashish','a/5','juhu',400001,'bombay',3000,200,150,'good');
+
+
+insert into Sales_order_59 values('O19001','12-jan-96','C00001','Wandon','S00001','F','N','20-jan-96','In Process');
+insert into Sales_order_59 values('O19002','25-jan-96','C00002','Don Street','S00002','P','N','27-jan-96','Cancelled');
+insert into Sales_order_59 values('O46865','18-feb-96','C00003','Mandon','S00003','F','Y','20-feb-96','Fulfilled');
+insert into Sales_order_59 values('O19003','03-apr-96','C00001','Jerome','S00001','F','Y','07-apr-96','Fulfilled');
+insert into Sales_order_59 values('O46866','20-may-96','C00004','Dadar','S00002','P','N','22-may-96','Cancelled');
+insert into Sales_order_59 values('O19008','24-may-96','C00005','rourk','S00004','F','N','26-may-96','In Process');
+
+
+
+	insert into Sales_order_details_59 values('O19001','P00001',4,4,525);
+	insert into Sales_order_details_59 values('O19002','P00001',10,0,525);
+	insert into Sales_order_details_59 values('O46865','P00001',10,10,525);
+	insert into Sales_order_details_59 values('O46866','P03453',4,4,1050);
+	insert into Sales_order_details_59 values('O19003','P03453',2,2,1050);
+	insert into Sales_order_details_59 values('O19008','P00001',10,5,525);
+
+insert into item_order_59 values('Basu','Worli','Monitor',1000);
+insert into item_order_59 values('Ivan','Juhu','Keyboard',800);
+insert into item_order_59 values('Ivan','Worli','Printer',1500);
+insert into item_order_59 values('Bayross','Wandon','Printer',1500);
+insert into item_order_59 values('Basu','Dadar','Mouse',500);
+insert into item_order_59 values('Vandana','Wandon','Monitor',1000);
+insert into item_order_59 values('Vandana','Wandon','Keyboard',800);
+insert into item_order_59 values('Bayross','Juhu','Mouse',500);
+
+select * from clientmaster_59;
+select * from product_master_59;
+select * from salesman_master_59;
+select * from sales_order_59;
+select * from sales_order_details_59;
+
+
+
+select salesman_name from salesman_master_59 where salesman_name like  '_a%';
+select name from clientmaster_59 where name like  'R%' and city = 'Delhi';
+select name,Address1,Address2 from clientmaster_59 where city = 'Delhi' or city = 'Maharashra';
+select Product_no,Description from Product_master_59 where Cost_price >5000;
+select * from sales_order_59 where ORDER_DATE like '%MAY%';
+select * from salesman_master_59 where salesman_no ='S00001' or salesman_no = 'S00002';
+select product_no,description from product_master_59 where sell_price >2000 and sell_price <=5000;
+select product_no,description,sell_price,sell_price*0.2 as new_sell_price from product_master_59 where sell_price >3000;
+select distinct count(*) as no_of_products from product_master_59;
+select count(*) as no_of_orders_fullfilled from sales_order_59 where order_status = 'Fulfilled';
+select avg(sell_price),avg(cost_price) from product_master_59;
+
+
+
+
+
+//DATA MANIPULATON
+select order_no, extract(day from order_date) as day from sales_order_59;
+select order_no, extract(month from dely_date) as month, extract(day from dely_date) as day from sales_order_59;
+select order_no,to_char(order_date,'dd/mm/yy') as order_date from sales_order_59;
+SELECT SYSDATE+15 FROM DUAL;
+select order_no,dely_date - order_date as no_of_days_elapsed from sales_order_59;
+
+
+//HAVING
+
+	select sum(price),item from item_order_59 group by item;
+	select customer_name,item  from item_order_59 order by customer_name;
+	//select customer_name,count(item)  from item_order_59 group by customer_name;
+	select address,item  from item_order_59 order by address;
+	select customer_name,sum(price) from item_order_59 group by customer_name having sum(price)>200;
+	//select distinct(customer_name) from item_order_59 where price>200;
+
+
+
+//select sum(cost_price),description from product_master_59 group by description;
+
+select sales_order_59.client_no,clientmaster_59.name,sales_order_details_59.product_no,product_master_59.description
+from sales_order_59 inner join sales_order_details_59 on
+sales_order_59.order_no=sales_order_details_59.order_no inner join product_master_59 on
+product_master_59.product_no=sales_order_details_59.product_no inner join clientmaster_59 on
+clientmaster_59.client_no=sales_order_59.client_no;
+
+select clientmaster_59.name from clientmaster_59 inner join sales_order_59 on
+clientmaster_59.client_no=sales_order_59.client_no where address1=dely_addr;
+
+select sales_order_59.client_no,count(sales_order_details_59.product_no) from sales_order_59 inner join sales_order_details_59 on (sales_order_59.order_no = sales_order_details_59.order_no) group by sales_order_59.client_no;
+
+select clientmaster_59.name from clientmaster_59 inner join sales_order_59 on
+clientmaster_59.client_no=sales_order_59.client_no inner join sales_order_details_59 on
+sales_order_59.order_no=sales_order_details_59.order_no where sales_order_details_59.order_no in ( select
+order_no from sales_order_details_59 where qty_ordered * product_rate > 200);
+
+//SUBQUERY
+select name,address1,address2,city,pincode from clientmaster_59 where client_no=(select
+client_no from sales_order_59 where order_no='O19001');
+
+select name from clientmaster_59 where client_no in(select client_no from sales_order_59 where
+order_date<'01-may-96');
+
+select client_no,name from clientmaster_59 where client_no in(select client_no from
+sales_order_59 where order_no in(select order_no from sales_order_details_59 where
+product_no=(select product_no from product_master_59 where description='1.44 floppies')));
+
+select product_no,description from product_master_59 where product_no in(select product_no
+from sales_order_details_59 where order_no in(select order_no from sales_order_59 where
+order_status='Fulfilled'));
+
+select name from clientmaster_59 where client_no in(select client_no from sales_order_59 where order_no in(select order_no from sales_order_details_59 where qty_ordered * product_rate >10000));
+
+//view
+create view client_details_59 as select client_no,name,city from clientmaster_59;
+UPDATE client_details_59 set city='Kannur' where city='Delhi';
+select * from client_details_59;
+
+
+
+select product_master_59.description from (product_master_50 inner join (clientmaster_59 inner join sales_order_59 on clientmaster_59.dely_addr = sales_order_59.address1) on product_master_59.product_no = sales_order_details_59.product_no);
+select product_master_59.description from (product_master_50 inner join (clientmaster_59 inner join sales_order_59 on clientmaster_59.dely_addr = sales_order_59.address1) on product_master_59.product_no = sales_order_details_59.product_no)
+
+
+select product_master_59.description as items from product_master_59 inner join sales_order_details_59 on
+
+product_master_59.product_no=sales_order_details_59.product_no inner join sales_order_59 on
+sales_order_59.order_no=sales_order_details_59.order_no inner join clientmaster_59 on
+clientmaster_59.client_no=sales_order_59.client_no where clientmaster_59.address1=sales_order_59.dely_addr;
+
+
+
+
+
+
