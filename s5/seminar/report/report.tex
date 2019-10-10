@@ -1,0 +1,53 @@
+
+% Just compile this file using pdflatex after making all required changes.
+
+\documentclass[12pt,a4paper]{report}
+\usepackage[pdftex]{graphicx} %for embedding images
+\renewcommand{\baselinestretch}{1.5}
+%\usepackage{url} %for proper url entries
+\usepackage[bookmarks, colorlinks=false, pdfborder={0 0 0}, pdftitle={<pdf title here>}, pdfauthor={<author's name here>}, pdfsubject={<subject here>}, pdfkeywords={<keywords here>}]{hyperref} %for creating links in the pdf version and other additional pdf attributes, no effect on the printed document
+%\usepackage[final]{pdfpages} %for embedding another pdf, remove if not required
+\usepackage{geometry}
+\usepackage[pdftex]{graphicx}
+\usepackage{graphicx}
+\usepackage{amsmath}
+\usepackage{fixltx2e}
+\usepackage{multirow}
+\usepackage{textcomp}
+
+\geometry{
+	left=2.2cm,
+	top=2.54cm,
+	bottom=2.921cm,
+	right=1.5cm
+}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\lhead{}
+\chead{}
+\lfoot{\textit{Department of Computer Applications,CET}}
+\cfoot{}
+\rfoot{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+\begin{document}
+\renewcommand\bibname{Bibliography} %Renames "Bibliography" to "References" on ref page
+
+%include other pages
+\input{./title.tex}
+\input{./certificate.tex}
+\input{./acknow.tex}
+\input{./abstract.tex}
+
+\pagenumbering{roman} %numbering before main content starts
+\tableofcontents
+\listoffigures
+
+\newpage
+\pagenumbering{arabic} %reset numbering to normal for the main content
+
+    \input{introduction.tex}
+    \input{deeplearning.tex}
+    
+
+\end{document}
