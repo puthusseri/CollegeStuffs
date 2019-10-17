@@ -1,0 +1,66 @@
+
+%%%%%%%%%%%%%%%%%%%%%%                                          About Style Based GAN                   
+\begin{frame}[fragile]{Style Based GAN}
+        \begin{itemize}
+        \item Introduced by NVIDIA 
+        \item Improved the efficiency of GAN by improving the generator
+        \item Introduced new automated metrics - perceptual path length and linear seperability
+        \item Result was  : new dataset Flickr Face HQ (FFHQ) of size 2.56 TB
+    \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                                          About Style Based Generator                   
+\begin{frame}[fragile]{Style Based Generator}
+        \begin{itemize}
+        \item The weights are studied through the 8 layer affine transformation.
+        \item Feature maps are normalized using AdaIN
+        \item Generate \textit{stochastic details} by introducing the explicit noise for each layer.
+        \item Final resulting feature maps are passd to the discriminator.
+    \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                           About Style Based Generator Architecture                   
+\begin{frame}[fragile]{Style Based Generator : Architecture}
+     \begin{figure}[ht]
+         \hspace*{-1cm}\includegraphics[width=0.9\linewidth]{styleganarchitecture.png} \\ \\ \\ \\ \\
+    \end{figure}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                                          About Style Based Image Quality                   
+\begin{frame}[fragile]{Image Quality }
+        \begin{itemize}
+        \item Comparing with CELENA-HQ with FFHQ based on Frechet inception distances (FID) , a great improvement happens
+        \item Used truncation trick
+        \item Used 26.3M parameters for training
+        \item Generated image is of 1024 * 1024 resolution
+    \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%                                  About Style Based generator Properties  1                 
+\begin{frame}[fragile]{Style Based Generator : Properties }
+        \begin{itemize}
+        \item Style mixing - mixing regularization
+    \end{itemize}
+    \begin{figure}[ht]
+         \hspace*{-1cm}\includegraphics[width=0.6\linewidth]{stylemixing.png} \\ \\ \\ \\ \\
+    \end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                                  About Style Based generator Properties  2                
+\begin{frame}[fragile]{Style Based Generator : Properties }
+        \begin{itemize}
+        \item Stochastic variation
+    \end{itemize}
+    \begin{figure}[ht]
+         \hspace*{-1cm}\includegraphics[width=0.7\linewidth]{stochasticvariation.png} \\ \\ \\ \\ \\
+    \end{figure}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
