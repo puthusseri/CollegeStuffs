@@ -41,11 +41,9 @@ College of Engineering, Trivandrum\\\\
 \end{frame}
 
 \section{Deep Learning}
-\section{GAN : Generative Adversarial Network}
 \section{Style Transfer}
+\section{GAN : Generative Adversarial Network}
 \section{Style Based Generator Architecture for GAN}
-\section{Conclusion}
-\section{References}
 
 \input{deeplearning.tex}
 \input{styletransfer.tex}
@@ -53,175 +51,18 @@ College of Engineering, Trivandrum\\\\
 \input{stylegan.tex}
 
 
-\begin{frame}
-  \begin{align*}
-    \includegraphics[width=90mm]{gan13}  
-\end{align*}  
-\end{frame}
-\begin{frame}{What is Generative Adversarial Networks (GAN)?}   
-\begin{align*}
-    \includegraphics[width=90mm]{gan2}  
-\end{align*}
-\end{frame}
-\begin{frame}   
-\begin{itemize}
-\item The two adversarially trained models are: a generative
-model G and a discriminative model D.
-\item The generator G takes a latent variable z as input, and outputs sample G(z).
-\item The discriminator D takes a sample x as input and outputs
-D(x) which represents the probability that it is real.
-\item The \underline{training procedure} is similar to a two-player min-max game
-with the following objective function:
-
-\begin{align*}
-    \includegraphics[width=100mm]{gan3}  
-\end{align*}
-\end{itemize}
-
-\end{frame}
-%----------------------------------------------------------------
-\section{Socially-Aware GAN}
-\begin{frame}{Solution: Socially-Aware GAN(SGAN)} 
-\begin{itemize}
-\item \Large Our proposed GAN is a RNN Encoder-Decoder generator and a RNN based encoder discriminator with two novelities:
-\begin{itemize}
-    \item {\large a variety loss function-adversarial loss}
-    \item {\large pooling mechanism - that learns a “global” pooling vector which encodes the actions of all people
-involved in a scene}
-\end{itemize}
-\end{itemize}
-\end{frame}
-%----------------------------------------------------------------
-\begin{frame}{SGAN conti...} 
-\begin{itemize}
-     \item {\large A} {\LARGE variety loss function}{\large -the distance between the true and the generated distributions at the current iteration.}
-\begin{align*}
-    \includegraphics[width=60mm]{gan6}  
-\end{align*}
-\end{itemize}
-\end{frame}
-%----------------------------------------------------------------
-\begin{frame}{SGAN conti...} 
-\begin{itemize}
-    \item Our model consists of three key components: Generator (G),
-Pooling Module (PM) and Discriminator (D).
-\item G is based on encoder-decoder framework where we link the hidden
-states of encoder and decoder via PM. 
-\item G takes as input Xi and outputs predicted trajectory $\hat Yi$. D inputs the entire sequence comprising both input trajectory Xi and future prediction $\hat Yi$ (or Yi) and classifies them as “real/fake”.
-\end{itemize}
-\begin{align*}
-    \includegraphics[width=120mm]{gan5}  
-\end{align*}
-\end{frame}
-%----------------------------------------------------------------
-\begin{frame}{SGAN conti...} 
-\huge Generator-Encoder
- \begin{itemize}
-    \item \large We first embed the location of each person
-using a single layer MLP to get a fixed length vector $e^t_{i}$.
-These embeddings are used as input to the LSTM cell of the \underline {encoder} at time t introducing the following recurrence:
- \begin{align*}
-    \includegraphics[width=50mm]{gan7}  
-\end{align*}
-where $\phi$(·) is an embedding function with ReLU nonlinearity,
-$W_{ee}$ is the embedding weight. The LSTM weights $(W_{encoder})$ are shared between all people in a scene.
- \end{itemize}
-\end{frame}
-
-\begin{frame}{SGAN conti...} 
-\huge Generator-Decoder
- \begin{itemize}
-    \item \large After initializing the \underline {decoder} states as described above we can obtain predictions as follows:
- \begin{align*}
-    \includegraphics[width=70mm]{gan8}  
-\end{align*}
-where $\phi$(·) is an embedding function with ReLU nonlinearity
-with $W_{ed}$ as the embedding weights. The LSTM
-weights are denoted by $(W_{decoder})$ and is an MLP.
- \end{itemize}
-\end{frame}
-%----------------------------------------------------------------
-\begin{frame}{SGAN conti...} 
-\huge Discriminator\\
- \begin{itemize}
-    \item \Large The discriminator consists of a separate
-encoder. Specifically, it takes as input $T_{real}$ = [Xi, Yi] or
-$T_{fake}$ = [Xi,$\hat Yi$] and classifies them as real/fake.
-\end{itemize}
-\end{frame}
-%----------------------------------------------------------------
-\begin{frame}{SGAN conti...} 
-\huge Pooling Module- \Large Social Pooling\\
- \begin{itemize}
-    \item \Large Variable and (potentially) large number of people in a scene. We need a compact representation which combines information from all the people.
-    \item \Large Scattered Human-Human Interaction.
-    
-     \begin{align*}
-    \includegraphics[width=90mm]{gan9}  
-\end{align*}
-\end{itemize}
-\end{frame}
-%----------------------------------------------------------------
-\section{Evaluations}
-\begin{frame}{Evaluations} 
-\huge Quantitative Evaluation
- \begin{align*}
-    \includegraphics[width=120mm]{gan10}  
-\end{align*}
-\small ADE-Average Displacement Error\\
-\small FDE-Final Displacement Error
-\end{frame}
-
-\begin{frame}{Evaluations} 
-\huge Qualitative Evaluation
- \begin{align*}
-    \includegraphics[width=120mm]{gan11}  
-\end{align*}
-
-\end{frame}
-%----------------------------------------------------------------
-\begin{frame}{Evaluations} 
-\huge Real World Scenario
- \begin{align*}
-    \includegraphics[width=120mm]{gan12}  
-\end{align*}
-\end{frame}
-%----------------------------------------------------------------
 \section{Conclusion}
 \begin{frame}{Conclusion}
     \begin{itemize}
-        \item We tackle the problem of modeling human-human
-interaction and jointly predicting trajectories for all
-people in a scene.
-        \item We propose a novel GAN based encoder-decoder
-framework for trajectory prediction capturing the
-multi-modality of the future prediction problem.
-        \item Introduced pooling mechanism enabling the network to learn social norms.
-       \item We saw the efficiency of
-our method on several complicated real-life scenarios where
-social norms must be followed.
-
-
+        \item Reduced time complexity of the GAN 
+        \item FFHQ image database
+    
     \end{itemize}
 \end{frame}
-%----------------------------------------------------------------
-\section{References}
-\begin{frame}{References}
-    \begin{itemize}
-        \item Social GAN: Socially Acceptable Trajectories with Generative Adversarial Networks by Agrim Gupta, Justin Johnson1, Li Fei-Fei1 Silvio Savarese,Alexandre Alahi.
-        \item A. Alahi, K. Goel, V. Ramanathan, A. Robicquet, L. Fei-Fei, and S. Savarese. Social lstm: Human trajectory prediction in crowded spaces. 
-        \item D. Helbing and P. Molnar. Social force model for pedestrian dynamics. 
-       \item Analyzing the Variety Loss in the Context of Probabilistic Trajectory Prediction by Luca Anthony Thiede and Pratik Prabhanjan Brahma
-\item Other online sources.
-
-
-    \end{itemize}
+\begin{frame}%%     1
+\begin{center}
+\Huge Thank You!
+\end{center}
 \end{frame}
-%----------------------------------------------------------------
-\begin{frame}
-\begin{align*}
-    \includegraphics[width=60mm]{thankyou}  
-\end{align*}
-
-\end{frame}
+%---------------------------------------------------------------
 \end{document}
