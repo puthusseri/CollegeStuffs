@@ -39,6 +39,7 @@
 \input{./acknow.tex}
 \input{./abstract.tex}
 
+
 \pagenumbering{roman} %numbering before main content starts
 \tableofcontents
 \listoffigures
@@ -47,7 +48,28 @@
 \pagenumbering{arabic} %reset numbering to normal for the main content
 
     \input{introduction.tex}
-    \input{deeplearning.tex}
-    
+    \input{chapter2styletransfer.tex}
+    \input{chapter3gan.tex}
+    \input{chapter4stylegan.tex}
+    \input{conclusion.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%% Bibilography
+
+\begin{thebibliography}{9}
+\bibitem{latexcompanion} 
+Michel Goossens, Frank Mittelbach, and Alexander Samarin. 
+\textit{The \LaTeX\ Companion}. 
+Addison-Wesley, Reading, Massachusetts, 1993.
+ 
+\bibitem{einstein} 
+Albert Einstein. 
+\textit{Zur Elektrodynamik bewegter K{\"o}rper}. (German) 
+[\textit{On the electrodynamics of moving bodies}]. 
+Annalen der Physik, 322(10):891–921, 1905.
+ 
+\bibitem{knuthwebsite} 
+Knuth: Computers and Typesetting,
+\\\texttt{http://www-cs-faculty.stanford.edu/\~{}uno/abcde.html}
+\end{thebibliography}
 
 \end{document}
