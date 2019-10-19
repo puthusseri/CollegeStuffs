@@ -47,24 +47,22 @@
 \newcommand{\nologo}{\setbeamertemplate{logo}{}} % command to set the logo to nothing
 \newcommand{\congress}{MCA CET}
 
-% footer
-\makeatletter
+
 \setbeamertemplate{footline}
 {
   \leavevmode%
   \hbox{%
-
-  \begin{beamercolorbox}[wd=.9\paperwidth,ht=2.25ex,dp=1ex,center]{institute in head/foot}%
-    \usebeamerfont{abstract}%
-    \congress
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+    
   \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.5ex,dp=1ex,center]{title in head/foot}%
 
-  \begin{beamercolorbox}[wd=.1\paperwidth,ht=2.25ex,dp=1ex,right]{institute in head/foot}%
-    \usebeamerfont{abstract} 
-    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex} 
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
   \end{beamercolorbox}}%
-  
+  \vskip0pt%
 }
+
 \makeatother
 
 
