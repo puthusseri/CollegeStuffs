@@ -1,0 +1,147 @@
+\documentclass[10pt]{beamer}
+
+\usetheme[progressbar=frametitle]{metropolis}
+
+\usepackage[T1]{fontenc}
+\usepackage{newunicodechar}
+%\usepackage[utf8]{inputenc}
+
+\usepackage{subcaption}
+\usepackage{adjustbox}
+\usepackage{booktabs}
+\usepackage[scale=2]{ccicons}
+
+% For pseudo codes
+\usepackage{algorithm}
+\usepackage[noend]{algpseudocode}
+\makeatletter
+\def\BState{\State\hskip-\ALG@thistlm}
+\makeatother
+%
+
+\usepackage{multirow}
+\usepackage[none]{hyphenat}
+\usepackage{textcomp}
+\usepackage{gensymb}
+\sloppy 
+%\usebackgroundtemplate
+
+
+\usepackage{pgfplots}
+\usepgfplotslibrary{dateplot}
+
+\usepackage{xspace}
+\newcommand{\themename}{\textbf{\textsc{metropolis}}\xspace}
+
+\setbeamercolor{background canvas}{bg=white!20}
+
+\title{Perfomance of  Generative Adversarial Networks}
+\date{\regno}
+\author{Vyshak Puthusseri}
+\institute{TVE17MCA054 \\
+\text{MCA CET }\\
+S5 : 51
+}
+\date{23th Oct 2019}
+
+
+
+
+\newcommand{\nologo}{\setbeamertemplate{logo}{}} 
+\newcommand{\congress}{MCA CET}
+
+
+\setbeamertemplate{footline}
+{
+  \leavevmode%
+  \hbox{%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=3.0ex,dp=1ex,center]{author in head/foot}%
+    \usebeamerfont{author in head/foot}\insertshortauthor
+    
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=.5\paperwidth,ht=3.0ex,dp=1ex,center]{title in head/foot}%
+
+    \insertframenumber{} / \inserttotalframenumber\hspace*{1ex}
+  \end{beamercolorbox}}%
+  \vskip0pt%
+}
+
+\makeatother
+
+
+
+
+% Document begin %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+\maketitle
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%                                          About Style Based Image Quality                   
+\begin{frame}[fragile]{Image Quality }
+    
+        \begin{itemize}
+        \item Comparing with CelebA-HQ with FFHQ based on Frechet inception distances (FID) , a great improvement happens
+    \end{itemize}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%                              Inception Score (IS)              
+\begin{frame}[fragile]{Inception Score (IS)}
+IS uses two criteria in measuring the performance of GAN:
+    \begin{itemize}
+        \item The quality of the generated images and
+        \item their diversity.
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                              Inception Score (IS)              
+\begin{frame}[fragile]{Inception Score (IS)}
+    \begin{itemize}
+        \item Entropy
+        \item If the value of a random variable x is highly predictable, it has low entropy.
+        \item In GAN, we want the conditional probability P(y|x) to be highly predictable (low entropy).
+        \item i.e. given an image, we should know the object type easily.
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                              Inception Score (IS)              
+\begin{frame}[fragile]{Inception Score - Image Quality}
+    \begin{itemize}
+
+        \item So we use an INCEPTION NETWORK to classify the generated images and predict P(y|x) — where y is the label and x is the generated data.
+
+      \begin{figure}[ht]
+         \hspace*{-1cm}\includegraphics[width=0.8\linewidth]{is.png} \\ \\ \\ \\ \\
+    \end{figure}
+   \item Misrepresent the performance if it only generates one image per class. p(y) will still be uniform even though the diversity is low
+    \end{itemize}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%                              FID             
+\begin{frame}[fragile]{Fréchet Inception Distance (FID)}
+    \begin{itemize}
+
+    \item Use the Inception network to extract features from an intermediate layer.
+    \item Model the data distribution for these features using a multivariate Gaussian distribution with mean µ and covariance Σ.
+    \item FID between the real images x and generated images g:
+         \begin{figure}[ht]
+             \hspace*{-1cm}\includegraphics[width=1.0\linewidth]{fid.png} \\ \\ \\ \\ \\
+        \end{figure}
+        where Tr sums up all the diagonal elements.
+
+    \end{itemize}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%                              FID             
+\begin{frame}[fragile]{Fréchet Inception Distance (FID)}
+Lower FID values mean better image quality and diversity
+\end{frame}
+
+\end{document}
