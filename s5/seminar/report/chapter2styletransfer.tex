@@ -23,7 +23,7 @@
     
    \[Lstyle = \frac{1}{2}  \left ( \sum_{i=0}^{L} \left ( Gij - Aij \right )^{2} \right )\]
 
-    As with the content representation, if we had two images whose feature maps at a given layer produced the same Gram matrix we would expect both images to have the same style, but not necessarily the same content. Applying this to early layers in the network would capture some of the finer textures contained within the image whereas applying this to deeper layers would capture more higher-level elements of the image’s style. Gatys et. al found that the best results were achieved by taking a combination of shallow and deep layers as the style representation for an image.We can see that the best results are achieved by a combination of many different layers from the network, which capture both the finer textures and the larger elements of the original image.
+    As with the content representation, if we had two images whose feature maps at a given layer produced the same Gram matrix we would expect both images to have the same style, but not necessarily the same content. Applying this to early layers in the network would capture some of the finer textures contained within the image whereas applying this to deeper layers would capture more higher-level elements of the image’s style. Gatys et. al [1] found that the best results were achieved by taking a combination of shallow and deep layers as the style representation for an image. The best results are achieved by a combination of many different layers from the network, which capture both the finer textures and the larger elements of the original image.
     \begin{figure}[h]
         \centering
         \includegraphics[width=0.8\linewidth]{styletransfer.png}
