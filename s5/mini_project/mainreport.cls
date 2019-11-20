@@ -68,7 +68,7 @@
 {\centering     
 
 \Large
-{\rm\bf SOULTION TO CUSTOMER LOYALITY PROBLEM}\\ 
+{\rm\bf SOLUTION TO CUSTOMER LOYALTY PROBLEM}\\ 
 
 \vspace{2cm}
 \normalsize {A PROJECT REPORT}\\
@@ -77,8 +77,8 @@
 submitted by \\
 \vspace{.5cm}
 \rm
-{\large \bf {VARNA KRISHNAN P E}}\\
-{\normalsize \bf {TVE17MCA052}}\\
+{\large \bf {VYSHAK PUTHUSSERI}}\\
+{\normalsize \bf {TVE17MCA054}}\\
 
 \vspace{0.3cm}
 {\bf{to}} \\
